@@ -198,7 +198,7 @@ struct SettingsView: View {
         HStack(alignment: .bottom) {
             if viewModel.sensorAgeDays > 0 {
                 Group {
-                    Text("\(viewModel.sensorAgeDays, specifier: "%.0f")")
+                    Text(String(format: "%.0f", viewModel.sensorAgeDays))
                         .font(.system(size: 28))
                         .fontWeight(.heavy)
                         .foregroundColor(.primary)
@@ -210,7 +210,7 @@ struct SettingsView: View {
             }
             if viewModel.sensorAgeHours > 0 {
                 Group {
-                    Text("\(viewModel.sensorAgeHours, specifier: "%.0f")")
+                    Text(String(format: "%.0f", viewModel.sensorAgeHours))
                         .font(.system(size: 28))
                         .fontWeight(.heavy)
                         .foregroundColor(.primary)
@@ -222,7 +222,7 @@ struct SettingsView: View {
             }
             if viewModel.sensorAgeDays == 0 {
                 Group {
-                    Text("\(viewModel.sensorAgeMinutes, specifier: "%.0f")")
+                    Text(String(format: "%.0f", viewModel.sensorAgeMinutes))
                         .font(.system(size: 28))
                         .fontWeight(.heavy)
                         .foregroundColor(.primary)
@@ -243,7 +243,7 @@ struct SettingsView: View {
                     .foregroundColor(.secondary)
                 Spacer()
                 Group {
-                    Text("\(viewModel.sensorWarmupMinutes, specifier: "%.0f")")
+                    Text(String(format: "%.0f", viewModel.sensorWarmupMinutes))
                         .font(.system(size: 28))
                         .fontWeight(.heavy)
                         .foregroundColor(.primary)
