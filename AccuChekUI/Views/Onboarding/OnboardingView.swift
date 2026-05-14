@@ -4,28 +4,47 @@ import SwiftUI
 struct OnboardingView: View {
     @Environment(\.dismissAction) private var dismiss
     let manualScan: () -> Void
+    let sensorPlacement: () -> Void
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 5) {
-            Text(
-                "Before starting, double check if your Accu-chek CGM is not expired. Expired CGM's cannot be used",
-                comment: "explain welcome"
-            )
-            Text(
-                "When clicking Continue, you will scan for your Accu chek CGM. Make sure you have the PIN ready for pairing with your phone!",
-                comment: "explain welcome"
-            )
+        VStack(alignment: .leading) {
+            List {
+                Section {
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Spacer()
+                            Image(imageName: "sensor")
+                                .resizable()
+                                .scaledToFit()
+                                .padding(.horizontal)
+                                .frame(height: 150)
+                                .padding(.bottom, 10)
+                            Spacer()
+                        }
+
+                        Text(
+                            "Before starting, double check if your Accu-chek CGM is not expired. Expired CGM's cannot be used",
+                            comment: "explain welcome"
+                        )
+                    }
+                }
+            }
 
             Spacer()
-            Button(action: manualScan) {
-                Text("Continue", comment: "label continue")
+            VStack(spacing: 10) {
+                Button(action: sensorPlacement) {
+                    Text("Placement Guide", comment: "label placement guide")
+                }
+                .buttonStyle(ActionButtonStyle(.secondary))
+
+                Button(action: manualScan) {
+                    Text("Continue", comment: "label continue")
+                }
+                .buttonStyle(ActionButtonStyle())
             }
-            .buttonStyle(ActionButtonStyle())
+            .padding(.horizontal)
         }
-        .padding(.horizontal)
-        .edgesIgnoringSafeArea(.bottom)
         .navigationTitle(String(localized: "Welcome!", comment: "welcome"))
-        .navigationBarHidden(false)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: self.dismiss) {

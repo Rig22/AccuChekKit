@@ -1621,6 +1621,166 @@
         }
       }
     },
+    "Close" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إغلاق"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zavřít"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luk"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schließen Sie"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cerrar"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sulje"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fermer"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סגור"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zárja be a"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chiudere"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "閉じる"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "닫기"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lukk"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sluit"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zamknij"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fechar"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Închidere"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Закрыть"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zatvoriť"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapri"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nära"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kapat"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Закрити"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đóng"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭"
+          }
+        }
+      }
+    },
     "Confirm" : {
       "comment" : "Confirmation label",
       "extractionState" : "manual",
@@ -2751,6 +2911,166 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "删除 CGM"
+          }
+        }
+      }
+    },
+    "Do not discard the twistcap until the pairing is completed! You will need the Sensor's Serial Number and PIN information during the pairing" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا تتخلص من الغطاء الملتوي حتى تكتمل عملية الاقتران! ستحتاج إلى الرقم التسلسلي لجهاز الاستشعار ومعلومات رقم التعريف الشخصي أثناء الاقتران"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neodhazujte kroutící uzávěr, dokud není párování dokončeno! Při párování budete potřebovat sériové číslo snímače a informace o kódu PIN."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kassér ikke twistcap'en, før parringen er afsluttet! Du skal bruge sensorens serienummer og PIN-oplysninger under parringen."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legen Sie die Twistcap nicht ab, bevor die Kopplung abgeschlossen ist! Sie benötigen die Seriennummer des Sensors und die PIN-Informationen während der Kopplung"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do not discard the twistcap until the pairing is completed! You will need the Sensor's Serial Number and PIN information during the pairing"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No tire la tapa hasta que se haya completado el emparejamiento. Necesitará el número de serie y el PIN del sensor durante el emparejamiento."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Älä hävitä kierrekorkkia ennen kuin paritus on valmis! Tarvitset anturin sarjanumeron ja PIN-koodin tietoja pariliitoksen aikana."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ne jetez pas le capuchon rotatif tant que l'appairage n'est pas terminé ! Vous aurez besoin du numéro de série du capteur et du code PIN lors de l'appairage."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אל תשליך את מכסה הפיתול עד לסיום ההתאמה! תזדקק למספר הסידורי ולפרטי ה- PIN של החיישן במהלך ההתאמה"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ne dobja ki a csavaros kupakot, amíg a párosítás be nem fejeződött! A párosítás során szüksége lesz az érzékelő sorozatszámára és PIN-kódjára."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Non gettare il cappuccio rotante prima di aver completato l'accoppiamento! Durante l'associazione sono necessari il numero di serie e il PIN del sensore."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ペアリングが完了するまでツイストキャップを捨てないでください！ペアリングの際、センサーのシリアル番号とPIN情報が必要です。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "페어링이 완료될 때까지 트위스트캡을 버리지 마세요! 페어링하는 동안 센서의 일련 번호와 PIN 정보가 필요합니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikke kast vrihetten før sammenkoblingen er fullført! Du trenger sensorens serienummer og PIN-kode under sammenkoblingen"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gooi de draaidop niet weg voordat het koppelen is voltooid! Tijdens het koppelen hebt u het serienummer en de pincode van de sensor nodig."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie wyrzucaj nasadki twistcap przed zakończeniem parowania! Podczas parowania konieczne będzie podanie numeru seryjnego czujnika i kodu PIN."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Não deite fora a tampa de torção até o emparelhamento estar concluído! Necessitará do número de série do sensor e das informações do PIN durante o emparelhamento"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nu aruncați twistcap-ul până când nu este finalizată asocierea! Veți avea nevoie de numărul de serie al senzorului și de informațiile PIN în timpul asocierii"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не выбрасывайте колпачок до завершения сопряжения! Во время сопряжения вам понадобятся серийный номер датчика и PIN-код"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neodhadzujte otočný uzáver, kým sa párovanie nedokončí! Počas párovania budete potrebovať sériové číslo snímača a informácie o kóde PIN"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ne zavrzite navojnega pokrovčka, dokler se parjenje ne zaključi! Med seznanjanjem boste potrebovali serijsko številko senzorja in podatke PIN."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kasta inte bort twistcap förrän parkopplingen är klar! Du kommer att behöva sensorns serienummer och PIN-kod under parkopplingen"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eşleştirme tamamlanana kadar twistcap'i atmayın! Eşleştirme sırasında Sensörün Seri Numarası ve PIN bilgisine ihtiyacınız olacaktır"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не викидайте заглушку до завершення сполучення! Під час сполучення вам знадобляться серійний номер датчика та інформація PIN-коду"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không loại bỏ nắp xoắn cho đến khi quá trình ghép nối hoàn tất! Bạn sẽ cần số sê-ri và thông tin mã PIN của Cảm biến trong quá trình ghép nối"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "配对完成前，请勿丢弃扭盖！在配对过程中，您将需要传感器的序列号和 PIN 信息"
           }
         }
       }
@@ -4375,6 +4695,166 @@
         }
       }
     },
+    "Important" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مهم"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Důležité"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vigtigt"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wichtig"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Important"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importante"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tärkeä"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Important"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "חשוב"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fontos"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importante"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重要"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "중요"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Viktig"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Belangrijk"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ważne"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importante"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Important"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Важно"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dôležité"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pomembno"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Viktigt"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Önemli"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Важливо"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quan trọng"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重要"
+          }
+        }
+      }
+    },
     "Is this the correct serial number? %@" : {
       "comment" : "found device message",
       "extractionState" : "manual",
@@ -4520,7 +5000,7 @@
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Це правильний серійний номер? {Це правильний серійний номер?}"
+            "value" : "Це правильний серійний номер? %@"
           }
         },
         "vi" : {
@@ -4533,6 +5013,166 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "这是正确的序列号吗？%@"
+          }
+        }
+      }
+    },
+    "It might take up to a full minute before the pairing is completed. Make sure to keep the twist cap till the pairing is complete." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قد يستغرق الأمر ما يصل إلى دقيقة كاملة قبل اكتمال الاقتران. تأكد من الاحتفاظ بالغطاء الملتوي حتى يكتمل الاقتران."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spárování může trvat až celou minutu. Až do dokončení párování nezapomeňte držet otočný uzávěr."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Det kan tage op til et helt minut, før parringen er færdig. Sørg for at beholde skruelåget på, indtil parringen er fuldført."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es kann bis zu einer ganzen Minute dauern, bis die Kopplung abgeschlossen ist. Achten Sie darauf, die Drehkappe aufzubewahren, bis das Pairing abgeschlossen ist."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "It might take up to a full minute before the pairing is completed. Make sure to keep the twist cap till the pairing is complete."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El emparejamiento puede tardar hasta un minuto en completarse. Asegúrate de mantener la tapa giratoria hasta que se complete el emparejamiento."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pariliitoksen muodostaminen voi kestää jopa minuutin. Pidä kierrekorkki kiinni, kunnes pariliitos on valmis."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il peut s'écouler jusqu'à une minute complète avant que l'appairage ne soit terminé. Veillez à conserver le capuchon rotatif jusqu'à ce que l'appairage soit terminé."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ייתכן שיחלוף דקה שלמה עד לסיום ההתאמה. הקפד לשמור על מכסה הטוויסט עד לסיום ההתאמה."
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A párosítás befejezése akár egy teljes percig is eltarthat. A párosítás befejezéséig tartsa a csavaros kupakot."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Potrebbe essere necessario un minuto intero prima che l'accoppiamento sia completato. Assicurarsi di mantenere il tappo a spirale fino al completamento dell'accoppiamento."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ペアリングが完了するまで、1分ほどかかる場合があります。ペアリングが完了するまで、必ずツイストキャップをかぶっておいてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "페어링이 완료되기까지 최대 1분 정도 걸릴 수 있습니다. 페어링이 완료될 때까지 트위스트 캡을 보관하세요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Det kan ta opptil ett minutt før paringen er fullført. Sørg for å holde på vrihetten til sammenkoblingen er fullført."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Het kan een volle minuut duren voor het koppelen voltooid is. Zorg ervoor dat je de draaidop ingedrukt houdt tot het koppelen voltooid is."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zakończenie parowania może potrwać do pełnej minuty. Upewnij się, że trzymasz zakrętkę do momentu zakończenia parowania."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pode demorar até um minuto antes de o emparelhamento estar concluído. Certifique-se de que mantém a tampa rotativa até o emparelhamento estar concluído."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este posibil să dureze până la un minut până la finalizarea asocierii. Asigurați-vă că mențineți capacul răsucit până la finalizarea asocierii."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сопряжение может занять до минуты. Не снимайте закручивающуюся крышку до завершения сопряжения."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Môže trvať až celú minútu, kým sa párovanie dokončí. Uistite sa, že otočný uzáver zostal až do dokončenia párovania."
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Parjenje se lahko zaključi šele čez celo minuto. Prepričajte se, da je pokrovček z zasukom zaprt, dokler se seznanjanje ne konča."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Det kan ta upp till en hel minut innan parkopplingen är klar. Se till att behålla skruvkorken på tills parkopplingen är klar."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eşleştirmenin tamamlanması tam bir dakika kadar sürebilir. Eşleştirme tamamlanana kadar çevirmeli kapağı tuttuğunuzdan emin olun."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Для завершення сполучення може знадобитися до хвилини. Не знімайте заглушку до завершення сполучення."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Có thể mất đến một phút trước khi quá trình ghép nối hoàn tất. Đảm bảo giữ nắp xoắn cho đến khi quá trình ghép nối hoàn tất."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "配对完成可能需要整整一分钟。在配对完成前，请务必保留扭转盖。"
           }
         }
       }
@@ -4695,6 +5335,166 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "扫描时将应用程序保持在前台..."
+          }
+        }
+      }
+    },
+    "Keep twist cap" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "احتفظ بالغطاء الملتوي"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Udržujte otočný uzávěr"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Behold skruelåg"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drehverschluss aufbewahren"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keep twist cap"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conservar tapón roscado"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pidä kierrekorkki"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conserver le bouchon à vis"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שמור על כובע טוויסט"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tartsa a csavaros kupakot"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conservare il tappo a vite"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ツイストキャップ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "트위스트 캡 유지"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Behold skrukorken"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Draaidop bewaren"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zachowaj zakrętkę"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manter a tampa de rosca"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Păstrați capacul cu răsucire"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Держите закручивающуюся крышку"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Udržujte otočný uzáver"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ohranite pokrovček twist"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Förvara skruvkorken"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bükümlü kapağı saklayın"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тримайте закручувальну кришку"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giữ nắp xoắn"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保持旋盖"
           }
         }
       }
@@ -6319,6 +7119,486 @@
         }
       }
     },
+    "Pairing with CGM" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإقران مع جهاز تخطيط كهربية القلب والرئة"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Párování s CGM"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Parring med CGM"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopplung mit CGM"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pairing with CGM"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Emparejamiento con CGM"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yhdistäminen CGM:n kanssa"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couplage avec le CGM"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "התאמה עם CGM"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Párosítás a CGM-mel"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbinamento con CGM"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CGMとのペアリング"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CGM과 페어링"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sammenkobling med CGM"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Koppelen met CGM"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Parowanie z CGM"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Emparelhamento com CGM"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Asocierea cu CGM"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сопряжение с CGM"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Párovanie s CGM"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Povezovanje s CGM"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Koppling till CGM"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CGM ile eşleştirme"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поєднання з CGM"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ghép nối với CGM"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "与 CGM 配对"
+          }
+        }
+      }
+    },
+    "Place the hand of the disinfected arm on your opposite shoulder. Reach under your arm and place the applicator on the site. Press down firmly to insert the sensor." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ضع يد الذراع المطهرة على كتفك المقابل. مدي يدك تحت ذراعك وضعي أداة التطهير على الموضع. اضغط لأسفل بقوة لإدخال المستشعر."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Položte si ruku dezinfikované paže na opačné rameno. Natáhněte se pod paži a přiložte aplikátor na místo. Pevně zatlačte dolů, aby se senzor zavedl."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Placer hånden på den desinficerede arm på din modsatte skulder. Ræk ind under armen, og placer applikatoren på stedet. Tryk godt ned for at indsætte sensoren."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legen Sie die Hand des desinfizierten Arms auf Ihre gegenüberliegende Schulter. Greifen Sie unter Ihren Arm und setzen Sie den Applikator auf die Stelle. Drücken Sie fest nach unten, um den Sensor einzuführen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Place the hand of the disinfected arm on your opposite shoulder. Reach under your arm and place the applicator on the site. Press down firmly to insert the sensor."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coloque la mano del brazo desinfectado sobre el hombro opuesto. Pase la mano por debajo del brazo y coloque el aplicador en la zona. Presione firmemente para introducir el sensor."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aseta desinfioidun käden käsi vastakkaiselle olkapäälle. Kurkota käsivarren alle ja aseta applikaattori kohtaan. Paina lujasti alaspäin anturin asettamiseksi paikalleen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Placez la main du bras désinfecté sur l'épaule opposée. Passez sous votre bras et placez l'applicateur sur le site. Appuyez fermement pour insérer le capteur."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הניחו את יד הזרוע המחוטאת על הכתף הנגדית. הושיט יד מתחת לזרועך והנח את המוליך באתר. לחץ כלפי מטה בחוזקה כדי להכניס את החיישן."
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Helyezze a fertőtlenített kar kezét a szemben lévő vállára. Nyúljon a karja alá, és helyezze az applikátort a területre. Nyomja le erősen az érzékelő behelyezéséhez."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appoggiare la mano del braccio disinfettato sulla spalla opposta. Allungare la mano sotto il braccio e posizionare l'applicatore sul sito. Premere con decisione per inserire il sensore."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "消毒した腕の手を反対側の肩に置きます。腕の下から手を伸ばし、アプリケータを部位に当てます。しっかりと押さえてセンサーを挿入します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "소독한 팔의 손을 반대쪽 어깨에 얹습니다. 팔 아래로 손을 뻗어 어플리케이터를 해당 부위에 놓습니다. 센서를 꾹 눌러 삽입합니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plasser hånden på den desinfiserte armen på motsatt skulder. Før hånden under armen og plasser applikatoren på stedet. Trykk godt ned for å sette inn sensoren."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plaats de hand van de gedesinfecteerde arm op je tegenovergestelde schouder. Reik onder je arm en plaats de applicator op de plaats. Druk stevig naar beneden om de sensor in te brengen."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Umieść dłoń zdezynfekowanej ręki na przeciwległym ramieniu. Sięgnij pod pachę i umieść aplikator na miejscu. Naciśnij mocno, aby włożyć czujnik."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Colocar a mão do braço desinfectado no ombro oposto. Passar a mão por baixo do braço e colocar o aplicador na zona afetada. Pressione firmemente para inserir o sensor."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Așezați mâna brațului dezinfectat pe umărul opus. Întindeți mâna sub braț și așezați aplicatorul pe site. Apăsați ferm în jos pentru a introduce senzorul."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Положите кисть продезинфицированной руки на противоположное плечо. Потянитесь под руку и поместите аппликатор на участок. Сильно надавите, чтобы вставить датчик."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Položte si ruku dezinfikovanej ruky na opačné rameno. Siahnite pod rameno a priložte aplikátor na miesto. Pevne zatlačte, aby ste vložili snímač."
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Roko razkužene roke položite na nasprotno ramo. Pod roko se dotaknite aplikatorja in ga položite na mesto. Močno pritisnite navzdol, da vstavite senzor."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Placera handen på den desinficerade armen på motsatt axel. Sträck dig under armen och placera applikatorn på området. Tryck ner ordentligt för att föra in sensorn."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dezenfekte edilen kolun elini karşı omzunuza yerleştirin. Kolunuzun altına uzanın ve aplikatörü bölgeye yerleştirin. Sensörü yerleştirmek için sıkıca bastırın."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Покладіть кисть дезінфікованої руки на протилежне плече. Просуньте руку під пахву і покладіть аплікатор на ділянку. Сильно натисніть, щоб вставити датчик."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đặt bàn tay của cánh tay đã khử trùng lên vai đối diện của bạn. Tiếp cận dưới cánh tay của bạn và đặt dụng cụ bôi lên trang web. Nhấn mạnh xuống để lắp cảm biến."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将消毒手臂的手放在对侧肩膀上。将手伸到手臂下方，将涂抹器放在患处。用力向下按压，插入传感器。"
+          }
+        }
+      }
+    },
+    "Placement Guide" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دليل التنسيب"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Průvodce umístěním"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guide til placering"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einstufungsleitfaden"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Placement Guide"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guía de colocación"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sijoitusopas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guide de placement"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מדריך מיקום"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elhelyezési útmutató"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guida al posizionamento"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プレースメント・ガイド"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "배치 가이드"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veiledning for plassering"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plaatsingsgids"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przewodnik umieszczania"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guia de colocação"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ghid de plasare"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Руководство по размещению"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sprievodca umiestnením"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vodnik za umestitev"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Placeringsguide"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yerleştirme Kılavuzu"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Посібник з працевлаштування"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hướng dẫn vị trí"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "安置指南"
+          }
+        }
+      }
+    },
     "Please be patience, this can take a full minute" : {
       "comment" : "connecting",
       "extractionState" : "manual",
@@ -6481,6 +7761,166 @@
         }
       }
     },
+    "Please be patient" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يرجى التحلي بالصبر"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buďte prosím trpěliví"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vær venligst tålmodig"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bitte haben Sie Geduld"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please be patient"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tenga paciencia"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ole kärsivällinen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Soyez patient"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אנא היה סבלני"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kérjük, legyen türelemmel"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siate pazienti"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "しばらくお待ちください"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "잠시만 기다려주세요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vær tålmodig"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Even geduld"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prosimy o cierpliwość"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Por favor, seja paciente"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vă rugăm să aveți răbdare"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пожалуйста, будьте терпеливы"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buďte prosím trpezliví"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bodite potrpežljivi"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vänligen ha tålamod"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lütfen sabırlı olun"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Будь ласка, наберіться терпіння"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xin hãy kiên nhẫn"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请耐心等待"
+          }
+        }
+      }
+    },
     "Remove CGM" : {
       "comment" : "Label for CgmManager deletion button",
       "extractionState" : "manual",
@@ -6639,6 +8079,166 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "移除 CGM"
+          }
+        }
+      }
+    },
+    "Remove the applicator in the same direction without rotating or wiggling it. Swipe over the adhesive pad firmly with your finger to make sure the adhesive pad is properly attached." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قم بإزالة أداة الوضع في نفس الاتجاه دون تدويرها أو تحريكها. مرر فوق الوسادة اللاصقة بإصبعك بإحكام بإصبعك للتأكد من تثبيت الوسادة اللاصقة بشكل صحيح."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyjměte aplikátor ve stejném směru, aniž byste jím otáčeli nebo kroutili. Prstem pevně přejeďte po lepicí podložce, abyste se ujistili, že je správně připevněna."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fjern applikatoren i samme retning uden at dreje eller vrikke med den. Stryg hårdt over klæbepuden med fingeren for at sikre, at klæbepuden sidder ordentligt fast."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ziehen Sie den Applikator in der gleichen Richtung ab, ohne ihn zu drehen oder zu wackeln. Streichen Sie mit dem Finger fest über das Klebepad, um sicherzustellen, dass das Klebepad richtig angebracht ist."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remove the applicator in the same direction without rotating or wiggling it. Swipe over the adhesive pad firmly with your finger to make sure the adhesive pad is properly attached."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retire el aplicador en la misma dirección sin girarlo ni moverlo. Pase firmemente el dedo sobre la almohadilla adhesiva para asegurarse de que está bien adherida."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Irrota applikaattori samaan suuntaan pyörittämättä tai heiluttamatta sitä. Pyyhkäise liimatyynyä tiukasti sormella varmistaaksesi, että liimatyyny on kunnolla kiinni."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retirez l'applicateur dans le même sens, sans le tourner ni le remuer. Passez fermement votre doigt sur le coussin adhésif pour vous assurer qu'il est correctement fixé."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הסר את המוליך באותו כיוון מבלי לסובב או להזיז אותו. החלק את כרית ההדבקה בחוזקה עם האצבע כדי לוודא שכרית ההדבקה מחוברת כראוי."
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vegye ki az applikátort ugyanabban az irányban, anélkül, hogy forgatná vagy csavargatná. Ujjával határozottan húzza át a ragasztópárnát, hogy meggyőződjön arról, hogy a ragasztópárna megfelelően rögzült."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rimuovere l'applicatore nella stessa direzione senza ruotarlo o agitarlo. Passare il dito sul cuscinetto adesivo per accertarsi che sia ben fissato."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アプリケーターは回転させたり、くねらせたりせずに、同じ方向に取り外してください。粘着パッドの上を指でしっかりとスワイプし、粘着パッドが正しく取り付けられていることを確認してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "어플리케이터를 돌리거나 흔들지 말고 같은 방향으로 떼어냅니다. 접착 패드가 제대로 부착되었는지 확인하기 위해 손가락으로 접착 패드 위를 세게 쓸어 넘깁니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fjern applikatoren i samme retning uten å rotere eller vrikke på den. Sveip godt over klebeputen med fingeren for å forsikre deg om at klebeputen sitter ordentlig fast."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verwijder de applicator in dezelfde richting zonder te draaien of te wiebelen. Veeg met je vinger stevig over het kleefkussen om te controleren of het kleefkussen goed vastzit."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zdejmij aplikator w tym samym kierunku, nie obracając go ani nie poruszając nim. Mocno przesuń palcem po podkładce samoprzylepnej, aby upewnić się, że podkładka samoprzylepna jest prawidłowo przymocowana."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retirar o aplicador na mesma direção, sem o rodar ou agitar. Passe o dedo sobre a almofada adesiva com firmeza para se certificar de que a almofada adesiva está corretamente fixada."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scoateți aplicatorul în aceeași direcție, fără a-l roti sau mișca. Treceți ferm cu degetul peste tamponul adeziv pentru a vă asigura că tamponul adeziv este atașat corect."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Извлекайте аппликатор в том же направлении, не вращая и не шевеля его. Проведите пальцем по клеевой подушечке, чтобы убедиться, что она приклеена правильно."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odstráňte aplikátor v rovnakom smere bez otáčania alebo krútenia. Prstom pevne prejdite po lepiacej podložke, aby ste sa uistili, že je správne pripevnená."
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odstranite aplikator v isti smeri, ne da bi ga obračali ali vrteli. S prstom močno podrsajte po lepilni blazinici in se prepričajte, da je pravilno pritrjena."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ta bort applikatorn i samma riktning utan att rotera eller vrida på den. Svep över den självhäftande dynan ordentligt med fingret för att se till att den självhäftande dynan sitter fast ordentligt."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplikatörü döndürmeden veya oynatmadan aynı yönde çıkarın. Yapışkan pedin düzgün şekilde takıldığından emin olmak için parmağınızla yapışkan pedin üzerinde sıkıca kaydırın."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зніміть аплікатор у тому ж напрямку, не обертаючи і не похитуючи його. Проведіть пальцем по адгезивній подушечці, щоб переконатися, що вона належним чином прикріплена."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tháo dụng cụ theo cùng một hướng mà không cần xoay hoặc lắc lư. Dùng ngón tay vuốt mạnh qua miếng dính để đảm bảo miếng dán được gắn đúng cách."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沿同一方向取下涂抹器，不要旋转或摆动。用手指紧紧扫过胶垫，确保胶垫正确粘贴。"
           }
         }
       }
@@ -6963,6 +8563,326 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "扫描 Accu Chek CGM"
+          }
+        }
+      }
+    },
+    "Scanning for CGM" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المسح الضوئي ل CGM"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skenování pro CGM"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scanning til CGM"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scannen nach CGM"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scanning for CGM"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escaneado para CGM"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CGM:n skannaus"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scanner pour CGM"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סריקה עבור CGM"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CGM szkennelés"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scansione per CGM"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CGMのスキャン"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CGM 스캔"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skanning for CGM"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scannen voor CGM"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skanowanie do CGM"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Digitalização para CGM"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scanarea pentru CGM"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сканирование для CGM"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skenovanie CGM"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skeniranje za CGM"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skanning för CGM"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CGM için tarama"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сканування на наявність КГМ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quét tìm CGM"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "扫描 CGM"
+          }
+        }
+      }
+    },
+    "Select your right or left arm to apply the sensor. Make sure to disinfect the chosen area first." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اختر ذراعك الأيمن أو الأيسر لتطبيق المستشعر. تأكد من تطهير المنطقة المختارة أولاً."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyberte pravou nebo levou ruku pro použití senzoru. Nezapomeňte vybranou oblast nejprve vydezinfikovat."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vælg din højre eller venstre arm til at sætte sensoren på. Sørg for at desinficere det valgte område først."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wählen Sie Ihren rechten oder linken Arm, um den Sensor anzubringen. Achten Sie darauf, die gewählte Stelle vorher zu desinfizieren."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select your right or left arm to apply the sensor. Make sure to disinfect the chosen area first."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seleccione el brazo derecho o izquierdo para aplicar el sensor. Asegúrese de desinfectar primero la zona elegida."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valitse oikea tai vasen käsivarsi anturin käyttöä varten. Muista desinfioida valittu alue ensin."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sélectionnez votre bras droit ou gauche pour appliquer le capteur. Veillez à désinfecter la zone choisie au préalable."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בחר בזרוע ימין או שמאל כדי להחיל את החיישן. הקפד לחטא תחילה את האזור שנבחר."
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Válassza ki a jobb vagy bal karját az érzékelő felhelyezéséhez. Ügyeljen arra, hogy először fertőtlenítse a kiválasztott területet."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selezionare il braccio destro o sinistro per applicare il sensore. Assicurarsi di disinfettare prima l'area scelta."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "右腕か左腕のどちらかを選んでセンサーを装着してください。まず、選択した部位を消毒してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "센서를 부착할 오른팔 또는 왼팔을 선택합니다. 선택한 부위를 먼저 소독해야 합니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velg høyre eller venstre arm for å påføre sensoren. Sørg for å desinfisere det valgte området først."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selecteer je rechter- of linkerarm om de sensor aan te brengen. Zorg ervoor dat je het gekozen gebied eerst desinfecteert."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wybierz prawe lub lewe ramię, aby zastosować czujnik. Pamiętaj, aby najpierw zdezynfekować wybrany obszar."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selecione o seu braço direito ou esquerdo para aplicar o sensor. Não se esqueça de desinfetar primeiro a área escolhida."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selectați brațul drept sau stâng pentru a aplica senzorul. Asigurați-vă că dezinfectați mai întâi zona aleasă."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите правую или левую руку для наложения датчика. Не забудьте предварительно продезинфицировать выбранную область."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyberte pravú alebo ľavú ruku, aby ste použili snímač. Nezabudnite vybranú oblasť najprv vydezinfikovať."
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Izberite desno ali levo roko za uporabo senzorja. Izbrano območje najprej razkužite."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Välj höger eller vänster arm för att applicera sensorn. Se till att desinficera det valda området först."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sensörü uygulamak için sağ veya sol kolunuzu seçin. Önce seçilen bölgeyi dezenfekte ettiğinizden emin olun."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Виберіть праву або ліву руку для прикладання датчика. Обов'язково продезінфікуйте обрану ділянку."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chọn cánh tay phải hoặc trái của bạn để áp dụng cảm biến. Đảm bảo khử trùng khu vực đã chọn trước."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择右臂或左臂佩戴传感器。确保先对所选区域进行消毒。"
           }
         }
       }
@@ -8911,6 +10831,166 @@
         }
       }
     },
+    "Slightly flip the pull tab open. If the pull tab has already been opened before use, discard the device and use a new one." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "افتح لسان السحب قليلاً. إذا كان لسان السحب مفتوحًا بالفعل قبل الاستخدام، تخلصي من الجهاز واستخدمي واحدًا جديدًا."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lehce odklopte stahovací jazýček. Pokud již bylo vytahovací očko před použitím otevřeno, zařízení vyhoďte a použijte nové."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vip trækfanen lidt op. Hvis trækfanen allerede er blevet åbnet før brug, skal du kassere enheden og bruge en ny."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klappen Sie die Aufreißlasche leicht auf. Wenn die Zuglasche bereits vor der Verwendung geöffnet wurde, entsorgen Sie das Gerät und verwenden Sie ein neues."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slightly flip the pull tab open. If the pull tab has already been opened before use, discard the device and use a new one."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abra ligeramente la lengüeta. Si la lengüeta ya se ha abierto antes del uso, deseche el dispositivo y utilice uno nuevo."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käännä vetokieleke hieman auki. Jos vetokieleke on jo avattu ennen käyttöä, hävitä laite ja käytä uutta."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrez légèrement la languette. Si la languette a déjà été ouverte avant l'utilisation, jeter le dispositif et en utiliser un nouveau."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הפוך מעט את לשונית המשיכה פתוחה. אם לשונית המשיכה כבר נפתחה לפני השימוש, השלך את המכשיר והשתמש במכשיר חדש."
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kissé fordítsa fel a kihúzófüleket. Ha a kihúzófül már használat előtt kinyílt, dobja ki a készüléket, és használjon újat."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aprire leggermente la linguetta di estrazione. Se la linguetta è già stata aperta prima dell'uso, gettare il dispositivo e utilizzarne uno nuovo."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プルタブを少しめくって開く。使用前にすでにプルタブが開いている場合は、デバイスを破棄し、新しいものを使用してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "당김 탭을 살짝 젖혀서 엽니다. 사용하기 전에 풀 탭을 이미 열었다면 기기를 폐기하고 새 기기를 사용하세요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vipp trekkfliken litt opp. Hvis trekkfliken allerede har blitt åpnet før bruk, må du kaste enheten og bruke en ny."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klap het treklipje een beetje open. Als het treklipje al geopend is voor gebruik, gooi het apparaat dan weg en gebruik een nieuwe."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lekko odchylić klapkę. Jeśli klapka została otwarta przed użyciem, wyrzuć urządzenie i użyj nowego."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir ligeiramente a patilha de puxar. Se a patilha de puxar já tiver sido aberta antes da utilização, deitar fora o dispositivo e utilizar um novo."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deschideți ușor clapeta de tragere. Dacă fila de tragere a fost deja deschisă înainte de utilizare, aruncați dispozitivul și utilizați unul nou."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Слегка откиньте выдвижной язычок. Если язычок был открыт перед использованием, выбросьте устройство и используйте новое."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ťažítko mierne otvorte. Ak už bol ťaháčik pred použitím otvorený, zariadenie vyhoďte a použite nové."
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nekoliko odprite izvlečni jeziček. Če je bil izvlečni jeziček pred uporabo že odprt, napravo zavrzite in uporabite novo."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vänd upp dragfliken en aning. Om dragfliken redan har öppnats före användning ska du kassera enheten och använda en ny."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çekme tırnağını hafifçe çevirerek açın. Çekme tırnağı kullanımdan önce açılmışsa, cihazı atın ve yeni bir tane kullanın."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Злегка відкиньте висувну панель. Якщо витяжна планка вже була відкрита перед використанням, викиньте пристрій і використовуйте новий."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hơi lật thanh kéo mở ra. Nếu tab kéo đã được mở trước khi sử dụng, hãy loại bỏ thiết bị và sử dụng thiết bị mới."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "轻轻翻开拉环。如果拉片在使用前已经打开，请丢弃设备并使用新的拉片。"
+          }
+        }
+      }
+    },
     "Start" : {
       "comment" : "start calibration",
       "extractionState" : "manual",
@@ -9235,6 +11315,810 @@
         }
       }
     },
+    "Step 1" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الخطوة 1"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krok 1"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trin 1"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schritt 1"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Step 1"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Primer paso"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaihe 1"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Étape 1"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שלב 1"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1. lépés"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passo 1"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ステップ1"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1단계"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trinn 1"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stap 1"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krok 1"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passo 1"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pasul 1"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Шаг 1"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krok 1"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Korak 1"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Steg 1"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adım 1"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Крок 1"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bước 1"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "步骤 1"
+          }
+        }
+      }
+    },
+    "Step 2" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الخطوة 2"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krok 2"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trin 2"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schritt 2"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Step 2"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paso 2"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaihe 2"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Étape 2"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שלב 2"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2. lépés"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passo 2"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ステップ2"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2단계"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trinn 2"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stap 2"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krok 2"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passo 2"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pasul 2"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Шаг 2"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krok 2"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Korak 2"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Steg 2"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adım 2"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Крок 2"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bước 2"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "步骤 2"
+          }
+        }
+      }
+    },
+    "Step 3" : {
+      "comment" : "A label displayed in a list of steps for placing a sensor.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الخطوة 3"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krok 3"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trin 3"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schritt 3"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Step 3"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paso 3"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaihe 3"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Étape 3"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שלב 3"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3. lépés"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passo 3"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ステップ3"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3단계"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trinn 3"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stap 3"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krok 3"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passo 3"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pasul 3"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Шаг 3"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krok 3"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Korak 3"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Steg 3"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adım 3"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Крок 3"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bước 3"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "步骤 3"
+          }
+        }
+      }
+    },
+    "Step 4" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الخطوة 4"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krok 4"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trin 4"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schritt 4"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Step 4"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paso 4"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaihe 4"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Étape 4"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שלב 4"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4. lépés"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passo 4"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ステップ4"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4단계"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trinn 4"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stap 4"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krok 4"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passo 4"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pasul 4"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Шаг 4"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krok 4"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Korak 4"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Steg 4"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adım 4"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Крок 4"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bước 4"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "步骤 4"
+          }
+        }
+      }
+    },
+    "Step 5" : {
+      "comment" : "A label displayed in a list of steps for placing a sensor.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الخطوة 5"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krok 5"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trin 5"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schritt 5"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Step 5"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paso 5"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaihe 5"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Étape 5"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שלב 5"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5. lépés"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passo 5"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ステップ5"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5단계"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trinn 5"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stap 5"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krok 5"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passo 5"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pasul 5"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Шаг 5"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krok 5"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Korak 5"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Steg 5"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adım 5"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Крок 5"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bước 5"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "步骤 5"
+          }
+        }
+      }
+    },
     "This Accu chek Sensor is using advanced encryption which is not supported yet... %@" : {
       "comment" : "unsupported device message",
       "extractionState" : "manual",
@@ -9308,7 +12192,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "このAccu chekセンサーは、まだサポートされていない高度な暗号化を使用しています...{xxx0xx｝"
+            "value" : "このAccu chekセンサーは、まだサポートされていない高度な暗号化を使用しています... %@"
           }
         },
         "ko" : {
@@ -9393,6 +12277,166 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "该 Accu chek 传感器使用高级加密，目前尚不支持...%@"
+          }
+        }
+      }
+    },
+    "This Accu-chek Sensor is using advanced encryption which is not supported yet... %@" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يستخدم مستشعر أكيوتشيك هذا تشفيرًا متقدمًا غير مدعوم حتى الآن... %@"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tento snímač Accu-chek používá pokročilé šifrování, které zatím není podporováno... %@"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Denne Accu-chek-sensor bruger avanceret kryptering, som ikke understøttes endnu... %@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dieser Accu-chek Sensor verwendet eine erweiterte Verschlüsselung, die noch nicht unterstützt wird... %@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This Accu-chek Sensor is using advanced encryption which is not supported yet... %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este sensor Accu-chek utiliza una encriptación avanzada que aún no es compatible... %@"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tämä Accu-chek-anturi käyttää kehittynyttä salausta, jota ei vielä tueta.... %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ce capteur Accu-chek utilise un cryptage avancé qui n'est pas encore pris en charge... %@"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "חיישן Accu-chek זה משתמש בהצפנה מתקדמת שעדיין אינה נתמכת... %@"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ez az Accu-chek érzékelő fejlett titkosítást használ, amely még nem támogatott... %@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questo sensore Accu-chek utilizza una crittografia avanzata che non è ancora supportata... %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このAccu-chekセンサーは、まだサポートされていない高度な暗号化を使用しています...%@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 Accu-chek 센서가 아직 지원되지 않는 고급 암호화를 사용하고 있습니다... %@"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Denne Accu-chek-sensoren bruker avansert kryptering som ikke støttes ennå ... %@"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deze Accu-chek sensor gebruikt geavanceerde codering die nog niet wordt ondersteund... %@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ten czujnik Accu-chek wykorzystuje zaawansowane szyfrowanie, które nie jest jeszcze obsługiwane... %@"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este sensor Accu-chek está a utilizar encriptação avançada que ainda não é suportada... %@"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acest senzor Accu-chek utilizează o criptare avansată care nu este încă acceptată... %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Этот датчик Accu-chek использует расширенное шифрование, которое пока не поддерживается... %@"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tento snímač Accu-chek používa pokročilé šifrovanie, ktoré zatiaľ nie je podporované... %@"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ta senzor Accu-chek uporablja napredno šifriranje, ki še ni podprto... %@"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Denna Accu-chek Sensor använder avancerad kryptering som inte stöds ännu... %@"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu Accu-chek Sensörü henüz desteklenmeyen gelişmiş şifreleme kullanıyor... %@"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Цей датчик Accu-chek використовує розширене шифрування, яке поки що не підтримується... %@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cảm biến Accu-chek này đang sử dụng mã hóa nâng cao chưa được hỗ trợ... %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "该 Accu-chek 传感器使用高级加密技术，目前尚不支持...%@"
           }
         }
       }
@@ -9555,6 +12599,326 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "时间"
+          }
+        }
+      }
+    },
+    "Trend mode" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وضع الاتجاه"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Režim Trend"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trend-tilstand"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trend-Modus"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trend mode"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modo tendencia"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trend-tila"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mode tendance"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מצב מגמה"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trend üzemmód"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modalità trend"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "トレンドモード"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "트렌드 모드"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trendmodus"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trendmodus"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryb trendu"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modo de tendência"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mod tendință"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Режим тренда"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Režim trendu"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Način trenda"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trendläge"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trend modu"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Режим тренду"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chế độ xu hướng"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "趋势模式"
+          }
+        }
+      }
+    },
+    "Turn the twist cap to open the sterile barrier. You will feel a slight resistance and hear a cracking sound. Pull the twist cap from the applicator." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أدر الغطاء الملتوي لفتح الحاجز المعقم. ستشعر بمقاومة طفيفة وستسمع صوت طقطقة. اسحب الغطاء الملتوي من أداة الاستخدام."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otočením otočného uzávěru otevřete sterilní bariéru. Ucítíte mírný odpor a uslyšíte praskání. Vytáhněte otočný uzávěr z aplikátoru."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drej skruelåget for at åbne den sterile barriere. Du vil mærke en let modstand og høre en knæklyd. Træk drejehætten af applikatoren."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drehen Sie die Drehkappe, um die Sterilbarriere zu öffnen. Sie werden einen leichten Widerstand spüren und ein knackendes Geräusch hören. Ziehen Sie die Drehkappe vom Applikator ab."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn the twist cap to open the sterile barrier. You will feel a slight resistance and hear a cracking sound. Pull the twist cap from the applicator."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gire el tapón giratorio para abrir la barrera estéril. Sentirá una ligera resistencia y oirá un chasquido. Extraiga el tapón giratorio del aplicador."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käännä kierrekorkkia avataksesi steriilin esteen. Tunnet lievää vastusta ja kuulet säröäänen. Vedä kierrekorkki applikaattorista."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tournez le bouchon pour ouvrir la barrière stérile. Vous sentirez une légère résistance et entendrez un craquement. Retirez le capuchon rotatif de l'applicateur."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סובב את מכסה הטוויסט כדי לפתוח את המחסום הסטרילי. תרגישו התנגדות קלה ותשמעו צליל פיצוח. משוך את מכסה הטוויסט מהמוליך."
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A sterilzár kinyitásához fordítsa el a csavaros kupakot. Enyhe ellenállást fog érezni, és egy recsegő hangot fog hallani. Húzza le a csavarható kupakot az applikátorról."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ruotare il tappo per aprire la barriera sterile. Si avvertirà una leggera resistenza e si sentirà un suono di scricchiolio. Estrarre il cappuccio dall'applicatore."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ツイストキャップを回して無菌バリアを開ける。わずかな抵抗を感じ、パチンと音がします。ツイストキャップをアプリケーターから引き抜く。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "트위스트 캡을 돌려 멸균 차단막을 엽니다. 약간의 저항이 느껴지고 딱딱한 소리가 들릴 것입니다. 어플리케이터에서 트위스트 캡을 당깁니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vri på vrihetten for å åpne den sterile barrieren. Du vil kjenne en liten motstand og høre en knitrende lyd. Trekk vrihetten av applikatoren."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Draai aan de draaidop om de steriele barrière te openen. Je voelt een lichte weerstand en hoort een krakend geluid. Trek de draaidop van de applicator."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przekręć zakrętkę, aby otworzyć sterylną barierę. Poczujesz lekki opór i usłyszysz trzask. Wyciągnąć nakrętkę z aplikatora."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rodar a tampa rotativa para abrir a barreira estéril. Sentirá uma ligeira resistência e ouvirá um som de estalido. Puxar a tampa rotativa do aplicador."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rotiți capacul răsucit pentru a deschide bariera sterilă. Veți simți o ușoară rezistență și veți auzi un sunet de cracare. Trageți capacul răsucit din aplicator."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поверните закручивающийся колпачок, чтобы открыть стерильный барьер. Вы почувствуете небольшое сопротивление и услышите треск. Вытяните закручивающийся колпачок из аппликатора."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otočením otočného uzáveru otvorte sterilnú bariéru. Pocítite mierny odpor a budete počuť praskanie. Vytiahnite otočný uzáver z aplikátora."
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zavrtite pokrovček, da odprete sterilno pregrado. Začutili boste rahel upor in slišali prasketanje. Potegnite navojni pokrovček z aplikatorja."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vrid på skruvkorken för att öppna den sterila barriären. Du kommer att känna ett lätt motstånd och höra ett knakande ljud. Dra bort vridlocket från applikatorn."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Steril bariyeri açmak için çevirmeli kapağı çevirin. Hafif bir direnç hissedecek ve bir çatlama sesi duyacaksınız. Bükümlü kapağı aplikatörden çekin."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поверніть ковпачок, щоб відкрити стерильний бар'єр. Ви відчуєте легкий опір і почуєте тріск. Зніміть ковпачок з аплікатора."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xoay nắp xoắn để mở hàng rào vô trùng. Bạn sẽ cảm thấy một lực cản nhẹ và nghe thấy một âm thanh nứt nẻ. Kẹp nắp xoắn ra khỏi dụng cụ bôi."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "旋转扭盖，打开无菌屏障。您会感觉到轻微的阻力，并听到咔哒声。从涂抹器中拔出扭转盖。"
           }
         }
       }
@@ -10365,6 +13729,486 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "是"
+          }
+        }
+      }
+    },
+    "You'll need the twist cap shortly to verify the Sensor's Serial Number (SN) and get your 6-digit PIN" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ستحتاج إلى الغطاء الملتوي قريبًا للتحقق من الرقم التسلسلي للمستشعر (SN) والحصول على رقم التعريف الشخصي المكون من 6 أرقام"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krátce budete potřebovat otočný uzávěr k ověření sériového čísla snímače (SN) a získání šestimístného kódu PIN."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du skal snart bruge drejelåget til at bekræfte sensorens serienummer (SN) og få din 6-cifrede PIN-kode."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sie benötigen die Drehkappe kurz, um die Seriennummer (SN) des Sensors zu überprüfen und Ihre 6-stellige PIN zu erhalten."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You'll need the twist cap shortly to verify the Sensor's Serial Number (SN) and get your 6-digit PIN"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En breve necesitará la tapa giratoria para verificar el número de serie (SN) del sensor y obtener su PIN de 6 dígitos."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tarvitset kierrekorkkia pian varmistaaksesi anturin sarjanumeron (SN) ja saadaksesi 6-numeroisen PIN-koodin."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vous aurez besoin du capuchon tournant pour vérifier le numéro de série (SN) du capteur et obtenir votre code PIN à 6 chiffres."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "תזדקק למכסה הטוויסט בקרוב כדי לאמת את המספר הסידורי (SN) של החיישן ולקבל את ה- PIN בן 6 הספרות שלך"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A csavaros kupakra rövidesen szüksége lesz az érzékelő sorozatszámának (SN) ellenőrzéséhez és a 6 számjegyű PIN-kód megszerzéséhez."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il tappo a rotazione è necessario per verificare il numero di serie del sensore (SN) e ottenere il PIN a 6 cifre."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "センサーのシリアル番号（SN）を確認し、6桁のPINを取得するには、まもなくツイストキャップが必要になります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "센서의 일련 번호(SN)를 확인하고 6자리 PIN을 받으려면 곧 트위스트 캡을 열어야 합니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du trenger snart vrihetten for å verifisere sensorens serienummer (SN) og få din sekssifrede PIN-kode"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "U hebt de draaidop straks nodig om het serienummer (SN) van de sensor te controleren en uw 6-cijferige pincode te krijgen."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nakrętka będzie wkrótce potrzebna do zweryfikowania numeru seryjnego czujnika (SN) i uzyskania 6-cyfrowego kodu PIN"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Necessitará brevemente da tampa rotativa para verificar o número de série (SN) do sensor e obter o seu PIN de 6 dígitos"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veți avea nevoie în scurt timp de capacul răsucit pentru a verifica numărul de serie (SN) al senzorului și pentru a obține codul PIN din 6 cifre"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вскоре вам понадобится закручивающаяся крышка, чтобы проверить серийный номер датчика (SN) и получить 6-значный PIN-код."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zakrátko budete potrebovať otočný uzáver na overenie sériového čísla (SN) snímača a získanie 6-miestneho kódu PIN."
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kmalu boste potrebovali pokrovček, da preverite serijsko številko senzorja (SN) in pridobite šestmestno kodo PIN."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du behöver snart vridlocket för att verifiera sensorns serienummer (SN) och få din 6-siffriga PIN-kod"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sensörün Seri Numarasını (SN) doğrulamak ve 6 haneli PIN kodunuzu almak için kısa süre içinde çevirmeli kapağa ihtiyacınız olacak"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Незабаром вам знадобиться заглушка, щоб перевірити серійний номер датчика (SN) і отримати 6-значний PIN-код."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bạn sẽ cần ngay nắp xoắn để xác minh Số sê-ri (SN) của Cảm biến và nhận mã PIN gồm 6 chữ số"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您很快就会需要这个旋盖来验证传感器的序列号 (SN)，并获得 6 位数的 PIN 码"
+          }
+        }
+      }
+    },
+    "Your sensor is calibrating. To complete the calibration phase, make sure to calibate between %@ and %@" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يتم معايرة المستشعر الخاص بك. لإكمال مرحلة المعايرة، تأكد من إجراء المعايرة بين %@ و %@"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Snímač se kalibruje. Chcete-li dokončit fázi kalibrace, ujistěte se, že jste kalibrovali mezi %@ a %@."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Din sensor er ved at blive kalibreret. For at afslutte kalibreringsfasen skal du sørge for at kalibrere mellem %@ og %@."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ihr Sensor wird gerade kalibriert. Um die Kalibrierungsphase abzuschließen, stellen Sie sicher, dass Sie zwischen %@ und %@ kalibrieren."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your sensor is calibrating. To complete the calibration phase, make sure to calibate between %@ and %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Su sensor se está calibrando. Para completar la fase de calibración, asegúrese de calibrar entre %@ y %@."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anturi kalibroi. Kalibrointivaiheen loppuunsaattamiseksi varmista, että kalibrointi tapahtuu %@ ja %@ välillä."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Votre capteur est en train de se calibrer. Pour terminer la phase de calibrage, assurez-vous de calibrer entre %@ et %@"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "החיישן שלך מכויל. כדי להשלים את שלב הכיול, הקפד לבצע בין %@ ל- %@"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Az érzékelője kalibrálódik. A kalibrálási fázis befejezéséhez győződjön meg róla, hogy a kalibrálás %@ és %@ között történik."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il sensore è in fase di calibrazione. Per completare la fase di calibrazione, assicurarsi di calibrare tra %@ e %@."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "センサーが校正中です。校正フェーズを完了するには、%@ と %@ の間で校正してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "센서가 보정 중입니다. 보정 단계를 완료하려면 %@에서 %@ 사이에서 보정해야 합니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sensoren kalibreres. For å fullføre kalibreringsfasen må du sørge for å kalibrere mellom %@ og %@."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je sensor is aan het kalibreren. Om de kalibratiefase te voltooien, moet je tussen %@ en %@ kalibreren."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trwa kalibracja czujnika. Aby zakończyć fazę kalibracji, należy wykonać kalibrację między %@ a %@."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O sensor está a calibrar. Para concluir a fase de calibragem, certifique-se de que calibra entre %@ e %@"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Senzorul dvs. este în curs de calibrare. Pentru a finaliza faza de calibrare, asigurați-vă că calibrați între %@ și %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваш датчик проходит калибровку. Чтобы завершить фазу калибровки, убедитесь, что калибровка выполняется между %@ и %@"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Senzor sa kalibruje. Ak chcete dokončiť kalibračnú fázu, uistite sa, že kalibrácia prebieha medzi %@ a %@."
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Senzor se umerja. Za dokončanje faze umerjanja poskrbite, da bo umerjanje potekalo med %@ in %@."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Din sensor håller på att kalibreras. För att slutföra kalibreringsfasen, se till att kalibrera mellan %@ och %@."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sensörünüz kalibre ediliyor. Kalibrasyon aşamasını tamamlamak için %@ ile %@ arasında kalibre ettiğinizden emin olun."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваш датчик калібрується. Щоб завершити етап калібрування, переконайтеся, що калібрування відбулося між %@ та %@."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cảm biến của bạn đang hiệu chỉnh. Để hoàn thành giai đoạn hiệu chuẩn, hãy đảm bảo calibate giữa %@ và %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "传感器正在校准。要完成校准阶段，请确保在 %@ 和 %@ 之间进行校准。"
+          }
+        }
+      }
+    },
+    "Your sensor is warming up. The first calibration is possible from: %@" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المستشعر قيد الإحماء. المعايرة الأولى ممكنة من: %@"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Váš senzor se zahřívá. První kalibrace je možná od: %@."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Din sensor er ved at varme op. Den første kalibrering er mulig fra: %@."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ihr Sensor erwärmt sich gerade. Die erste Kalibrierung ist möglich ab: %@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your sensor is warming up. The first calibration is possible from: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Su sensor se está calentando. La primera calibración es posible a partir de: %@"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anturisi on lämpenemässä. Ensimmäinen kalibrointi on mahdollista alkaen: %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Votre capteur est en train de chauffer. Le premier étalonnage est possible à partir de : %@"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "החיישן שלך מתחמם. הכיול הראשון אפשרי מ: %@"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Az érzékelője felmelegszik. Az első kalibrálás a következő időponttól lehetséges: %@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il sensore si sta riscaldando. La prima calibrazione è possibile da: %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "センサーがウォームアップ中です。最初の較正は%@から可能です。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "센서가 예열 중입니다. 첫 번째 보정은 %@에서 가능합니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sensoren varmes opp. Den første kalibreringen er mulig fra: %@."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je sensor is aan het opwarmen. De eerste kalibratie is mogelijk vanaf: %@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Czujnik się nagrzewa. Pierwsza kalibracja jest możliwa od: %@."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O sensor está a aquecer. A primeira calibração é possível a partir de: %@"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Senzorul dvs. se încălzește. Prima calibrare este posibilă de la: %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваш датчик разогревается. Первая калибровка возможна с: %@"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Senzor sa zahrieva. Prvá kalibrácia je možná od: %@"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Senzor se segreva. Prva kalibracija je mogoča od: %@"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Din sensor håller på att värmas upp. Den första kalibreringen är möjlig från: %@"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sensörünüz ısınıyor. İlk kalibrasyon şu noktadan itibaren mümkündür: %@"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваш датчик нагрівається. Перше калібрування можливе за адресою: %@."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cảm biến của bạn đang nóng lên. Hiệu chuẩn đầu tiên có thể thực hiện từ: %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "传感器正在预热。第一次校准可以从： %@ 开始。"
           }
         }
       }

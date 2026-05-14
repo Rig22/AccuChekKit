@@ -50,7 +50,7 @@ struct SettingsView: View {
                 VStack(spacing: 0) {
                     HStack {
                         Spacer()
-                        Image(uiImage: UIImage(named: "sensor", in: Bundle(for: AccuChekUIController.self), compatibleWith: nil)!)
+                        Image(imageName: "sensor")
                             .resizable()
                             .scaledToFit()
                             .padding(.horizontal)
@@ -68,6 +68,23 @@ struct SettingsView: View {
                 }
                 .padding(.bottom, 5)
 
+                if let title = viewModel.calibrationPhase.title, let description = viewModel.calibrationPhase.description {
+                    VStack(alignment: .leading) {
+                        HStack(spacing: 10) {
+                            Image(systemName: "exclamationmark.triangle.fill")
+                                .foregroundStyle(.orange)
+                            Text(title)
+                                .fontWeight(.heavy)
+                                .foregroundStyle(.primary)
+                        }
+
+                        Text(
+                            String(format: description, viewModel.nextCalibrationTime, viewModel.nextCalibrationTimeEnd)
+                        )
+                        .foregroundStyle(.secondary)
+                    }
+                }
+
                 if !viewModel.notifications.isEmpty {
                     ForEach(viewModel.notifications) { notification in
                         HStack(alignment: .center) {
@@ -76,6 +93,7 @@ struct SettingsView: View {
                                     Image(systemName: "exclamationmark.triangle.fill")
                                         .foregroundStyle(.red)
                                     Text(notification.title)
+                                        .fontWeight(.heavy)
                                         .foregroundStyle(.primary)
                                 }
                                 Text(notification.content)
@@ -111,18 +129,21 @@ struct SettingsView: View {
                     title: Text("Serial Number", comment: "CGM name"),
                     value: viewModel.deviceName
                 )
-                SectionItem(
+                SectionItemDualRow(
                     title: Text("Started at", comment: "cgm started"),
-                    value: viewModel.sensorStartedAt
+                    value: viewModel.sensorStartedAtDate,
+                    value2: viewModel.sensorStartedAtTime
                 )
-                SectionItem(
+                SectionItemDualRow(
                     title: Text("Ends at", comment: "cgm ends"),
-                    value: viewModel.sensorEndsAt
+                    value: viewModel.sensorEndsAtDate,
+                    value2: viewModel.sensorEndsAtTime
                 )
-                if let nextCalibration = viewModel.nextCalibration {
-                    SectionItem(
+                if let date = viewModel.nextCalibrationDate {
+                    SectionItemDualRow(
                         title: Text("Next calibration at", comment: "cgm calibration"),
-                        value: nextCalibration
+                        value: date,
+                        value2: viewModel.nextCalibrationTime
                     )
                 }
             } header: {
@@ -191,6 +212,20 @@ struct SettingsView: View {
             Spacer()
             Text(value)
                 .foregroundColor(.secondary)
+        }
+    }
+
+    @ViewBuilder private func SectionItemDualRow(title: Text, value: String, value2: String) -> some View {
+        HStack(alignment: .center) {
+            title
+                .foregroundColor(.primary)
+            Spacer()
+            VStack(alignment: .trailing) {
+                Text(value)
+                    .foregroundColor(.secondary)
+                Text(value2)
+                    .foregroundColor(.secondary)
+            }
         }
     }
 

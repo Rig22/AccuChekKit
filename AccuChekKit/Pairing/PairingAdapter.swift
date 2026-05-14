@@ -53,9 +53,9 @@ extension PairingAdapter {
     }
 
     private func getLastCalibration(startTime: Date) {
-        let getCalibration = GetCalibrationPacket(recordIndex: 0xFFFF)
+        let lastCalibration = GetCalibrationPacket(recordIndex: 0xFFFF)
         guard peripheralManager.write(
-            packet: getCalibration,
+            packet: lastCalibration,
             service: CBUUID.CGM_SERVICE,
             characteristic: CBUUID.CGM_CONTROL_POINT
         )
@@ -64,11 +64,29 @@ extension PairingAdapter {
             return
         }
 
-        if getCalibration.nextCalibrationOffset == 0xFFFF {
+        if lastCalibration.nextCalibrationOffset == 0xFFFF {
             cgmManager.state.nextCalibrationAt = nil
+            cgmManager.state.calibrationPhase = .done
         } else {
-            let offset = TimeInterval(minutes: Double(getCalibration.nextCalibrationOffset))
+            let offset = TimeInterval(minutes: Double(lastCalibration.nextCalibrationOffset))
             cgmManager.state.nextCalibrationAt = startTime.addingTimeInterval(offset)
+
+            let warmupCalibration = GetCalibrationPacket(recordIndex: 0)
+            guard peripheralManager.write(
+                packet: warmupCalibration,
+                service: CBUUID.CGM_SERVICE,
+                characteristic: CBUUID.CGM_CONTROL_POINT
+            )
+            else {
+                logger.error("Failed to read warmup calibration")
+                return
+            }
+
+            if warmupCalibration.recordNumber == lastCalibration.recordNumber {
+                cgmManager.state.calibrationPhase = .warmingup
+            } else {
+                cgmManager.state.calibrationPhase = .calibratedOnce
+            }
         }
 
         cgmManager.notifyStateDidChange()
@@ -115,14 +133,9 @@ extension PairingAdapter {
     }
 
     private func setStartTime() {
-        var startTime = Date.now
-        if let expiryDate = cgmManager.state.expiryDate, startTime > expiryDate {
-            // Fake the start date to bypass the expiry check in the CGM
-            startTime = expiryDate.addingTimeInterval(.days(30))
-        }
-
-        cgmManager.state.cgmStartTime = Date.now
-        cgmManager.state.fakeStartTime = startTime
+        let startTime = Date.now
+        cgmManager.state.cgmStartTime = startTime
+        cgmManager.notifyStateDidChange()
 
         let packet = SetStartTimePacket(date: startTime)
         guard peripheralManager.write(packet: packet, service: CBUUID.CGM_SERVICE, characteristic: CBUUID.CGM_SESSION_START)

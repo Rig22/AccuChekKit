@@ -15,9 +15,13 @@ class SettingsViewModel: ObservableObject {
     @Published var deviceName: String = ""
     @Published var lastMeasurement = HKQuantity(unit: .milligramsPerDeciliter, doubleValue: 0)
     @Published var lastMeasurementDatetime: String = ""
-    @Published var nextCalibration: String? = nil
-    @Published var sensorStartedAt: String = ""
-    @Published var sensorEndsAt: String = ""
+    @Published var nextCalibrationDate: String? = nil
+    @Published var nextCalibrationTime: String = ""
+    @Published var nextCalibrationTimeEnd: String = ""
+    @Published var sensorStartedAtDate: String = ""
+    @Published var sensorStartedAtTime: String = ""
+    @Published var sensorEndsAtDate: String = ""
+    @Published var sensorEndsAtTime: String = ""
     @Published var sensorAgeProcess: Double = 0
     @Published var sensorAgeDays: Double = 0
     @Published var sensorAgeHours: Double = 0
@@ -26,30 +30,31 @@ class SettingsViewModel: ObservableObject {
     @Published var sensorWarmupMinutes: Double = 0
     @Published var notifications: [NotificationContent] = []
 
+    @Published var calibrationPhase: CalibrationPhase = .done
+
     @Published var isSharePresented = false
     @Published var showingDeleteConfirmation = false
     @Published var showingRepairConfirmation = false
 
     private let dateFormatter = {
         let formatter = DateFormatter()
-        formatter.timeStyle = .short
         formatter.dateStyle = .medium
         return formatter
     }()
 
     private let timeFormatter = {
         let formatter = DateFormatter()
-        formatter.timeStyle = .medium
+        formatter.timeStyle = .short
         return formatter
     }()
 
     private let logger = AccuChekLogger(category: "SettingsViewModel")
-    private let cgmManager: AccuChekCgmManager?
+    private let cgmManager: AccuChekCgmManager
     let doCalibration: () -> Void
     private let doPairing: () -> Void
     let deleteCGM: () -> Void
     init(
-        _ cgmManager: AccuChekCgmManager?,
+        _ cgmManager: AccuChekCgmManager,
         doCalibration: @escaping () -> Void,
         doPairing: @escaping () -> Void,
         deleteCGM: @escaping () -> Void
@@ -59,27 +64,20 @@ class SettingsViewModel: ObservableObject {
         self.doPairing = doPairing
         self.deleteCGM = deleteCGM
 
-        guard let cgmManager = cgmManager else {
-            return
-        }
-
         stateDidUpdate(cgmManager.state)
         cgmManager.addStateObserver(state: self, queue: DispatchQueue.main)
     }
 
+    deinit {
+        cgmManager.removeStateObserver(state: self)
+    }
+
     func getLogs() -> [URL] {
-        if let cgmManager = self.cgmManager {
-            logger.info(cgmManager.state.debugDescription)
-        }
+        logger.info(cgmManager.state.debugDescription)
         return logger.getDebugLogs()
     }
 
     func pairNewCGM() {
-        guard let cgmManager else {
-            logger.error("No CGMManager")
-            return
-        }
-
         cgmManager.cleanup()
         doPairing()
     }
@@ -90,6 +88,7 @@ extension SettingsViewModel: StateObserver {
         connected = state.isConnected
         deviceName = state.deviceName ?? ""
         notifications = state.cgmStatus.compactMap(\.notification)
+        calibrationPhase = state.calibrationPhase
 
         if let glucose = state.lastGlucoseValue {
             lastMeasurement = HKQuantity(unit: .milligramsPerDeciliter, doubleValue: Double(glucose))
@@ -100,9 +99,12 @@ extension SettingsViewModel: StateObserver {
         }
 
         if let nextCalibrationAt = state.nextCalibrationAt {
-            nextCalibration = dateFormatter.string(from: nextCalibrationAt)
+            nextCalibrationDate = dateFormatter.string(from: nextCalibrationAt)
+            nextCalibrationTime = timeFormatter.string(from: nextCalibrationAt)
+            nextCalibrationTimeEnd = timeFormatter.string(from: nextCalibrationAt.addingTimeInterval(.hours(2)))
         } else {
-            nextCalibration = nil
+            nextCalibrationDate = nil
+            nextCalibrationTime = ""
         }
 
         guard let cgmStartTime = state.cgmStartTime, let cgmEndTime = state.cgmEndTime else {
@@ -110,8 +112,10 @@ extension SettingsViewModel: StateObserver {
         }
 
         let warmupEnd = cgmStartTime.addingTimeInterval(.hours(1))
-        sensorStartedAt = dateFormatter.string(from: cgmStartTime)
-        sensorEndsAt = dateFormatter.string(from: cgmEndTime)
+        sensorStartedAtDate = dateFormatter.string(from: cgmStartTime)
+        sensorStartedAtTime = timeFormatter.string(from: cgmStartTime)
+        sensorEndsAtDate = dateFormatter.string(from: cgmEndTime)
+        sensorEndsAtTime = timeFormatter.string(from: cgmEndTime)
 
         if cgmEndTime < Date.now {
             cgmState = .expired

@@ -19,6 +19,39 @@ public struct GlucoseDisplay: GlucoseDisplayable {
     }
 }
 
+enum CalibrationPhase: UInt8 {
+    case warmingup
+    case calibratedOnce
+    case done
+
+    var title: String? {
+        switch self {
+        case .calibratedOnce,
+             .warmingup:
+            return String(localized: "Trend mode", comment: "trend mode title")
+        default:
+            return nil
+        }
+    }
+
+    var description: String? {
+        switch self {
+        case .warmingup:
+            return String(
+                localized: "Your sensor is warming up. The first calibration is possible from: %@",
+                comment: "trend mode description warming up"
+            )
+        case .calibratedOnce:
+            return String(
+                localized: "Your sensor is calibrating. To complete the calibration phase, make sure to calibate between %@ and %@",
+                comment: "trend mode description calibrated once"
+            )
+        default:
+            return nil
+        }
+    }
+}
+
 struct AccuChekState: RawRepresentable, Equatable {
     public typealias RawValue = CGMManager.RawStateValue
 
@@ -28,9 +61,7 @@ struct AccuChekState: RawRepresentable, Equatable {
     public var mtu: UInt16 = 0
     public var deviceName: String?
     public var previousDeviceName: String?
-    public var nextDeviceName: String?
     public var serialNumber: String?
-    public var expiryDate: Date?
     public var certificate: Certificate?
 
     public var cgmStatus: [SensorStatusEnum]
@@ -42,7 +73,6 @@ struct AccuChekState: RawRepresentable, Equatable {
     public var aesKey: Data?
     public var aesNonce: Data?
 
-    public var fakeStartTime: Date?
     public var cgmStartTime: Date?
     public var cgmEndTime: Date? {
         guard let cgmStartTime else {
@@ -58,6 +88,7 @@ struct AccuChekState: RawRepresentable, Equatable {
     public var lastGlucoseTrend: GlucoseTrend?
 
     public var nextCalibrationAt: Date?
+    public var calibrationPhase: CalibrationPhase
 
     public var accessToken: String?
     public var expiresAt: Date?
@@ -82,6 +113,7 @@ struct AccuChekState: RawRepresentable, Equatable {
         accessToken = rawValue["accessToken"] as? String
         refreshToken = rawValue["refreshToken"] as? String
         expiresAt = rawValue["expiresAt"] as? Date
+        previousDeviceName = rawValue["previousDeviceName"] as? String
 
         if let rawLastGlucoseTrend = rawValue["lastGlucoseTrend"] as? GlucoseTrend.RawValue {
             lastGlucoseTrend = GlucoseTrend(rawValue: rawLastGlucoseTrend) ?? .flat
@@ -93,6 +125,12 @@ struct AccuChekState: RawRepresentable, Equatable {
             cgmStatus = rawCgmStatus.compactMap { SensorStatusEnum(rawValue: $0) }
         } else {
             cgmStatus = []
+        }
+
+        if let rawCalibrationPhase = rawValue["calibrationPhase"] as? CalibrationPhase.RawValue {
+            calibrationPhase = CalibrationPhase(rawValue: rawCalibrationPhase) ?? .done
+        } else {
+            calibrationPhase = .done
         }
 
         do {
@@ -125,9 +163,11 @@ struct AccuChekState: RawRepresentable, Equatable {
         raw["lastGlucoseValue"] = lastGlucoseValue
         raw["lastGlucoseTrend"] = lastGlucoseTrend?.rawValue
         raw["nextCalibrationAt"] = nextCalibrationAt
+        raw["calibrationPhase"] = calibrationPhase.rawValue
         raw["accessToken"] = accessToken
         raw["refreshToken"] = refreshToken
         raw["expiresAt"] = expiresAt
+        raw["previousDeviceName"] = previousDeviceName
 
         do {
             raw["certificate"] = try JSONEncoder().encode(certificate)

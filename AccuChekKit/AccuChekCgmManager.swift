@@ -32,7 +32,7 @@ public class AccuChekCgmManager: CGMManager {
         state.debugDescription
     }
 
-    public required init?(rawState: RawStateValue) {
+    public required init(rawState: RawStateValue) {
         state = AccuChekState(rawValue: rawState)
         bluetooth = AccuChekBluetoothManager()
 

@@ -1,8 +1,6 @@
 import Foundation
 import UserNotifications
 
-private var logger = AccuChekLogger(category: "NotificationHelper")
-
 struct NotificationContent: Identifiable {
     let id = UUID()
 
@@ -14,6 +12,8 @@ struct NotificationContent: Identifiable {
 }
 
 enum NotificationHelper {
+    private static let logger = AccuChekLogger(category: "NotificationHelper")
+
     public static func sendCgmAlert(alerts: [NotificationContent]) {
         ensureCanSendNotification {
             alerts.forEach {

@@ -5,21 +5,25 @@ import UIKit
 
 enum AccuChekScreen {
     case onboarding
+    case placementGuide
+    case scanning
     case pairing
     case settings
     case calibration
 }
 
 class AccuChekUIController: UINavigationController, CGMManagerOnboarding, CompletionNotifying, UINavigationControllerDelegate {
-    let logger = AccuChekLogger(category: "AccuChekUIController")
+    private let logger = AccuChekLogger(category: "AccuChekUIController")
 
     var cgmManagerOnboardingDelegate: LoopKitUI.CGMManagerOnboardingDelegate?
     var completionDelegate: LoopKitUI.CompletionDelegate?
-    var cgmManager: AccuChekCgmManager?
-    var displayGlucosePreference: DisplayGlucosePreference
 
-    var colorPalette: LoopUIColorPalette
-    var screenStack = [AccuChekScreen]()
+    private var cgmManager: AccuChekCgmManager
+    private var displayGlucosePreference: DisplayGlucosePreference
+    private var colorPalette: LoopUIColorPalette
+    private var screenStack = [AccuChekScreen]()
+
+    private var scanResult: ScanResult?
 
     init(
         cgmManager: AccuChekCgmManager? = nil,
@@ -58,11 +62,7 @@ class AccuChekUIController: UINavigationController, CGMManagerOnboarding, Comple
     }
 
     private func getInitialScreen() -> AccuChekScreen {
-        if cgmManager?.isOnboarded ?? false {
-            return .settings
-        }
-
-        return .onboarding
+        cgmManager.isOnboarded ? .settings : .onboarding
     }
 
     private func hostingController<Content: View>(rootView: Content) -> DismissibleHostingController<some View> {
@@ -74,37 +74,47 @@ class AccuChekUIController: UINavigationController, CGMManagerOnboarding, Comple
     private func viewControllerForScreen(_ screen: AccuChekScreen) -> UIViewController {
         switch screen {
         case .onboarding:
-            let view = OnboardingView(manualScan: { self.navigateTo(.pairing) })
+            let view = OnboardingView(
+                manualScan: onboardingDone,
+                sensorPlacement: { self.navigateTo(.placementGuide) }
+            )
             return hostingController(rootView: view)
+
+        case .placementGuide:
+            return hostingController(rootView: SensorPlacementView())
+
+        case .scanning:
+            let viewModel = ScanViewModel(
+                cgmManager: cgmManager,
+                nextStep: { result in
+                    DispatchQueue.main.async {
+                        self.cgmManagerOnboardingDelegate?.cgmManagerOnboarding(didOnboardCGMManager: self.cgmManager)
+                    }
+
+                    self.scanResult = result
+                    self.resetNavigationTo([.pairing])
+                }
+            )
+            return hostingController(rootView: ScanView(viewModel: viewModel))
 
         case .pairing:
             let nextStep = {
-                if let cgmManager = self.cgmManager {
-                    DispatchQueue.main.async {
-                        self.cgmManagerOnboardingDelegate?.cgmManagerOnboarding(didOnboardCGMManager: cgmManager)
-                        self.cgmManagerOnboardingDelegate?.cgmManagerOnboarding(didCreateCGMManager: cgmManager)
-                        self.completionDelegate?.completionNotifyingDidComplete(self)
-                    }
+                DispatchQueue.main.async {
+                    self.cgmManagerOnboardingDelegate?.cgmManagerOnboarding(didCreateCGMManager: self.cgmManager)
+                    self.completionDelegate?.completionNotifyingDidComplete(self)
                 }
             }
 
-            let viewModel = PairingViewModel(cgmManager, nextStep: nextStep)
+            let viewModel = PairingViewModel(
+                cgmManager,
+                scanResult: scanResult,
+                nextStep: nextStep
+            )
             return hostingController(rootView: PairingView(viewModel: viewModel))
 
         case .settings:
-            let doCalibration = {
-                self.navigateTo(.calibration)
-            }
-            let doPairing = {
-                self.navigateTo(.pairing)
-            }
             let deleteCGM = {
-                guard let cgmManager = self.cgmManager else {
-                    self.completionDelegate?.completionNotifyingDidComplete(self)
-                    return
-                }
-
-                cgmManager.notifyDelegateOfDeletion {
+                self.cgmManager.notifyDelegateOfDeletion {
                     DispatchQueue.main.async {
                         self.completionDelegate?.completionNotifyingDidComplete(self)
                     }
@@ -113,8 +123,8 @@ class AccuChekUIController: UINavigationController, CGMManagerOnboarding, Comple
 
             let viewModel = SettingsViewModel(
                 cgmManager,
-                doCalibration: doCalibration,
-                doPairing: doPairing,
+                doCalibration: { self.navigateTo(.calibration) },
+                doPairing: { self.navigateTo(.scanning) },
                 deleteCGM: deleteCGM
             )
             return hostingController(rootView: SettingsView(viewModel: viewModel))
@@ -126,19 +136,17 @@ class AccuChekUIController: UINavigationController, CGMManagerOnboarding, Comple
     }
 
     private func doOnboarding() {
-        if let cgmManager = self.cgmManager {
-            cgmManager.state.onboarded = true
-            cgmManager.notifyStateDidChange()
+        cgmManager.state.onboarded = true
+        cgmManager.notifyStateDidChange()
 
-            if let cgmManagerOnboardingDelegate = self.cgmManagerOnboardingDelegate {
-                DispatchQueue.main.async {
-                    cgmManagerOnboardingDelegate.cgmManagerOnboarding(didOnboardCGMManager: cgmManager)
-                    cgmManagerOnboardingDelegate.cgmManagerOnboarding(didCreateCGMManager: cgmManager)
-                    self.completionDelegate?.completionNotifyingDidComplete(self)
-                }
-            } else {
-                logger.warning("Not onboarded -> no onboardDelegate...")
+        if let cgmManagerOnboardingDelegate = self.cgmManagerOnboardingDelegate {
+            DispatchQueue.main.async {
+                cgmManagerOnboardingDelegate.cgmManagerOnboarding(didOnboardCGMManager: self.cgmManager)
+                cgmManagerOnboardingDelegate.cgmManagerOnboarding(didCreateCGMManager: self.cgmManager)
+                self.completionDelegate?.completionNotifyingDidComplete(self)
             }
+        } else {
+            logger.warning("Not onboarded -> no onboardDelegate...")
         }
     }
 
@@ -169,5 +177,27 @@ class AccuChekUIController: UINavigationController, CGMManagerOnboarding, Comple
         }
 
         setViewControllers(viewControllers, animated: true)
+    }
+
+    private func onboardingDone() {
+        #if targetEnvironment(simulator)
+            cgmManager.state.deviceName = "Simulator"
+            cgmManager.state.onboarded = true
+            cgmManager.state.nextCalibrationAt = Date.now.addingTimeInterval(.minutes(25))
+            cgmManager.state.calibrationPhase = .calibratedOnce
+            cgmManager.state.cgmStartTime = Date.now
+            cgmManager.state.cgmStatus = []
+            cgmManager.notifyStateDidChange()
+
+            if let cgmManagerOnboardingDelegate = self.cgmManagerOnboardingDelegate {
+                DispatchQueue.main.async {
+                    cgmManagerOnboardingDelegate.cgmManagerOnboarding(didOnboardCGMManager: self.cgmManager)
+                    cgmManagerOnboardingDelegate.cgmManagerOnboarding(didCreateCGMManager: self.cgmManager)
+                    self.completionDelegate?.completionNotifyingDidComplete(self)
+                }
+            }
+        #else
+            navigateTo(.pairing)
+        #endif
     }
 }

@@ -9,6 +9,7 @@ class GetCalibrationPacket: AccuChekBasePacket {
     var receivedResponse: Bool = false
     var nextCalibrationOffset: UInt16 = 0
     var calibrationStatus: UInt8 = 0
+    var recordNumber: UInt16 = 0
 
     let characteristics: [CBUUID] = [
         CBUUID.CGM_CONTROL_POINT
@@ -34,6 +35,7 @@ class GetCalibrationPacket: AccuChekBasePacket {
 
         receivedResponse = true
         nextCalibrationOffset = data.getUInt16(offset: 6)
+        recordNumber = data.getUInt16(offset: 8)
         calibrationStatus = data[10]
     }
 
