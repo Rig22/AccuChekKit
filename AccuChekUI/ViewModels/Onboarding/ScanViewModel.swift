@@ -16,6 +16,8 @@ class ScanViewModel: ObservableObject {
     init(cgmManager: AccuChekCgmManager, nextStep: @escaping (ScanResult) -> Void) {
         self.cgmManager = cgmManager
         self.nextStep = nextStep
+
+        startScanning()
     }
 
     deinit {
