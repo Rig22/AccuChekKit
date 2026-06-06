@@ -2,7 +2,6 @@ import CoreBluetooth
 import Foundation
 
 class GetLastCgmMeasurementPacket: AccuChekBasePacket {
-    private let logger = AccuChekLogger(category: "GetLastCgmMeasurementPacket")
     private var receivedFinalMessage = false
     var measurements: [CgmMeasurement] = []
 
