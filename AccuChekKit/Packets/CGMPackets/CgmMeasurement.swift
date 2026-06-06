@@ -15,7 +15,7 @@ class CgmMeasurement {
     // are clamped and reported as LO / HI rather than as a dosable number.
     private static let lowThresholdMgDl: UInt16 = 40
     private static let highThresholdMgDl: UInt16 = 400
-    
+
     private static let statusSensorMalfunction: UInt8 = 0x08
 
     init(_ data: Data) {
@@ -30,13 +30,16 @@ class CgmMeasurement {
             statusValues.append(data[6])
         }
 
-        // Drop the reading when the sensor reports a malfunction (status bit 0x08 is set).
-        isValid = (statusByte & CgmMeasurement.statusSensorMalfunction) == 0
+        // Drop the reading when the sensor reports a malfunction (status bit 0x08
+        // is set) or when the glucose word decodes to a non-finite value (NaN /
+        // ±infinity), which would trap the UInt16 conversion below.
+        let decoded = data.getDouble(offset: 2)
+        let notMalfunctioning = (statusByte & CgmMeasurement.statusSensorMalfunction) == 0
+        isValid = notMalfunctioning && decoded.isFinite
 
         if isValid {
             // Clamp before narrowing: a malformed glucose word can decode outside
             // UInt16's range, and an unchecked conversion would trap.
-            let decoded = data.getDouble(offset: 2)
             let value = UInt16(min(max(decoded, 0), Double(UInt16.max)))
 
             if value <= CgmMeasurement.lowThresholdMgDl {
