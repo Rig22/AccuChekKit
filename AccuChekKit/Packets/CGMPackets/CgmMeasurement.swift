@@ -8,22 +8,53 @@ class CgmMeasurement {
     let statusValues: Data
     let trend: Double?
     let quality: Double?
+    let isValid: Bool
+    let condition: GlucoseCondition?
+
+    // The sensor is spec'd to 40-400 mg/dL (2.2-22.2 mmol/L). Values at the edges
+    // are clamped and reported as LO / HI rather than as a dosable number.
+    private static let lowThresholdMgDl: UInt16 = 40
+    private static let highThresholdMgDl: UInt16 = 400
+
+    private static let statusSensorMalfunction: UInt8 = 0x08
 
     init(_ data: Data) {
-        var glucose = UInt16(bitPattern: Int16(data.getDouble(offset: 2)))
-        if glucose > 0xF802 {
-            glucose = 40
-        }
-
         flags = data[1]
-        glucoseInMgDl = glucose
         timeOffset = TimeInterval.minutes(Double(data.getUInt16(offset: 4)))
 
         var statusValues = Data()
 
         let hasStatus = (flags & CgmFlag.status.rawValue) != 0
+        let statusByte: UInt8 = hasStatus ? data[6] : 0
         if hasStatus {
             statusValues.append(data[6])
+        }
+
+        // Drop the reading when the sensor reports a malfunction (status bit 0x08
+        // is set) or when the glucose word decodes to a non-finite value (NaN /
+        // ±infinity), which would trap the UInt16 conversion below.
+        let decoded = data.getDouble(offset: 2)
+        let notMalfunctioning = (statusByte & CgmMeasurement.statusSensorMalfunction) == 0
+        isValid = notMalfunctioning && decoded.isFinite
+
+        if isValid {
+            // Clamp before narrowing: a malformed glucose word can decode outside
+            // UInt16's range, and an unchecked conversion would trap.
+            let value = UInt16(min(max(decoded, 0), Double(UInt16.max)))
+
+            if value <= CgmMeasurement.lowThresholdMgDl {
+                condition = .belowRange
+                glucoseInMgDl = CgmMeasurement.lowThresholdMgDl
+            } else if value >= CgmMeasurement.highThresholdMgDl {
+                condition = .aboveRange
+                glucoseInMgDl = CgmMeasurement.highThresholdMgDl
+            } else {
+                condition = nil
+                glucoseInMgDl = value
+            }
+        } else {
+            condition = nil
+            glucoseInMgDl = 0
         }
 
         let hasCalibration = (flags & CgmFlag.calibration.rawValue) != 0
