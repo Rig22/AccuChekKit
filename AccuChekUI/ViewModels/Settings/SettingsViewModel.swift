@@ -148,9 +148,8 @@ extension SettingsViewModel: StateObserver {
 
         let deviceName = state.deviceName ?? ""
         if deviceName.hasPrefix("AC-") {
+            // Replace "AC-" with "(21) " prefix as per on the applicator pacakaging
             deviceSerialNumber = "(21) " + deviceName.dropFirst(3)
-        } else {
-            deviceSerialNumber = deviceName
         }
 
         if let glucose = state.lastGlucoseValue {
