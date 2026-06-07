@@ -88,6 +88,19 @@ public class AccuChekCgmManager: CGMManager {
             return
         }
 
+        // If the sensor has not been calibrated twice
+        // we fetch the latest sensor status in order
+        // to ensure that calibration is truly available.
+        // (sensor is source of truth)
+        if state.calibrationPhase != .done {
+            DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+                guard let self, let status = readSensorStatus() else { return }
+                DispatchQueue.main.async {
+                    self.notifyNewStatus(status)
+                }
+            }
+        }
+
         if startTime.addingTimeInterval(.hours(1)) >= Date.now {
             logger.info("Ignoring cgm data during warming up")
             return
@@ -151,6 +164,16 @@ public class AccuChekCgmManager: CGMManager {
         return true
     }
 
+    internal var readingsUnavailable: Bool {
+        get { state.readingsUnavailable }
+        set {
+            // Check if the value has actually changed to avoid unnecessary state changes
+            guard state.readingsUnavailable != newValue else { return }
+            state.readingsUnavailable = newValue
+            notifyStateDidChange()
+        }
+    }
+
     internal func notifyNewStatus(_ status: SensorStatus) {
         state.cgmStatus = status.status
         state.cgmStatusTimestamp = Date.now
@@ -160,6 +183,15 @@ public class AccuChekCgmManager: CGMManager {
         if !notifications.isEmpty {
             NotificationHelper.sendCgmAlert(alerts: notifications)
         }
+    }
+
+    internal func readSensorStatus() -> SensorStatus? {
+        guard let cgmStatus = bluetooth.read(service: CBUUID.CGM_SERVICE, characteristic: CBUUID.CGM_STATUS) else {
+            logger.error("Failed to read sensor status for calibration gate")
+            return nil
+        }
+
+        return SensorStatus(data: cgmStatus)
     }
 
     internal func cleanup() {

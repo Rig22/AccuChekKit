@@ -3,25 +3,15 @@ import HealthKit
 import LoopKit
 import SwiftUI
 
-enum CGMState {
-    case warmingup
-    case active
-    case expired
-}
-
 class SettingsViewModel: ObservableObject {
     @Published var cgmState = CGMState.warmingup
     @Published var connected: Bool = false
-    @Published var deviceName: String = ""
+    @Published var deviceSerialNumber: String = ""
     @Published var lastMeasurement = HKQuantity(unit: .milligramsPerDeciliter, doubleValue: 0)
     @Published var lastMeasurementDatetime: String = ""
     @Published var nextCalibrationDate: String? = nil
-    @Published var nextCalibrationTime: String = ""
-    @Published var nextCalibrationTimeEnd: String = ""
-    @Published var sensorStartedAtDate: String = ""
-    @Published var sensorStartedAtTime: String = ""
-    @Published var sensorEndsAtDate: String = ""
-    @Published var sensorEndsAtTime: String = ""
+    @Published var sensorStartedAt: String = ""
+    @Published var sensorEndsAt: String = ""
     @Published var sensorAgeProcess: Double = 0
     @Published var sensorAgeDays: Double = 0
     @Published var sensorAgeHours: Double = 0
@@ -29,21 +19,26 @@ class SettingsViewModel: ObservableObject {
     @Published var sensorWarmupProgress: Double = 0
     @Published var sensorWarmupMinutes: Double = 0
     @Published var notifications: [NotificationContent] = []
-
+    @Published var readingsUnavailable: Bool = false
+    @Published var calibrationAvailable: Bool = false
     @Published var calibrationPhase: CalibrationPhase = .done
-
+    @Published var calibrationConfirmed: Bool = false
     @Published var isSharePresented = false
     @Published var showingDeleteConfirmation = false
     @Published var showingRepairConfirmation = false
 
-    private let dateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        return formatter
-    }()
+    // Simulator-only
+    @Published var demoStatus: SensorStatusDisplay? = nil
 
     private let timeFormatter = {
         let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        return formatter
+    }()
+
+    private let dateTimeFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
         formatter.timeStyle = .short
         return formatter
     }()
@@ -72,6 +67,46 @@ class SettingsViewModel: ObservableObject {
         cgmManager.removeStateObserver(state: self)
     }
 
+    var sensorStatus: SensorStatusDisplay {
+        if let demoStatus {
+            return demoStatus
+        }
+
+        func hasNotification(_ type: SensorStatusEnum) -> Bool {
+            notifications.contains { $0.type == type }
+        }
+
+        if !connected {
+            return .connecting
+        }
+        if cgmState == .expired || hasNotification(.sessionStopped) {
+            return .expired
+        }
+        if hasNotification(.generalDeviceFaultOccuredInSensor) {
+            return .malfunction
+        }
+        if readingsUnavailable {
+            return .readingsUnavailable
+        }
+        if hasNotification(.deviceBatteryLow) {
+            return .batteryLow
+        }
+        if hasNotification(.sensorTemperatureTooHigh) || hasNotification(.sensorTemperatureTooLow) {
+            return .temperature
+        }
+
+        let calibrationDue = calibrationAvailable && calibrationConfirmed
+
+        switch calibrationPhase {
+        case .warmingup:
+            return .trendMode(calibrationDue: calibrationDue)
+        case .calibratedOnce:
+            return .therapyMode(calibrationDue: calibrationDue)
+        case .done:
+            return cgmState == .warmingup ? .trendMode(calibrationDue: false) : .ok
+        }
+    }
+
     func getLogs() -> [URL] {
         logger.info(cgmManager.state.debugDescription)
         return logger.getDebugLogs()
@@ -86,9 +121,17 @@ class SettingsViewModel: ObservableObject {
 extension SettingsViewModel: StateObserver {
     func stateDidUpdate(_ state: AccuChekState) {
         connected = state.isConnected
-        deviceName = state.deviceName ?? ""
+        readingsUnavailable = state.readingsUnavailable
         notifications = state.cgmStatus.compactMap(\.notification)
         calibrationPhase = state.calibrationPhase
+        calibrationConfirmed = state.cgmStatus.contains(.calibrationRecommended)
+            || state.cgmStatus.contains(.calibrationRequired)
+
+        let deviceName = state.deviceName ?? ""
+        if deviceName.hasPrefix("AC-") {
+            // Replace "AC-" with "(21) " prefix as per on the applicator pacakaging
+            deviceSerialNumber = "(21) " + deviceName.dropFirst(3)
+        }
 
         if let glucose = state.lastGlucoseValue {
             lastMeasurement = HKQuantity(unit: .milligramsPerDeciliter, doubleValue: Double(glucose))
@@ -99,12 +142,11 @@ extension SettingsViewModel: StateObserver {
         }
 
         if let nextCalibrationAt = state.nextCalibrationAt {
-            nextCalibrationDate = dateFormatter.string(from: nextCalibrationAt)
-            nextCalibrationTime = timeFormatter.string(from: nextCalibrationAt)
-            nextCalibrationTimeEnd = timeFormatter.string(from: nextCalibrationAt.addingTimeInterval(.hours(2)))
+            nextCalibrationDate = dateTimeFormatter.string(from: nextCalibrationAt)
+            calibrationAvailable = Date.now >= nextCalibrationAt
         } else {
             nextCalibrationDate = nil
-            nextCalibrationTime = ""
+            calibrationAvailable = false
         }
 
         guard let cgmStartTime = state.cgmStartTime, let cgmEndTime = state.cgmEndTime else {
@@ -112,10 +154,8 @@ extension SettingsViewModel: StateObserver {
         }
 
         let warmupEnd = cgmStartTime.addingTimeInterval(.hours(1))
-        sensorStartedAtDate = dateFormatter.string(from: cgmStartTime)
-        sensorStartedAtTime = timeFormatter.string(from: cgmStartTime)
-        sensorEndsAtDate = dateFormatter.string(from: cgmEndTime)
-        sensorEndsAtTime = timeFormatter.string(from: cgmEndTime)
+        sensorStartedAt = dateTimeFormatter.string(from: cgmStartTime)
+        sensorEndsAt = dateTimeFormatter.string(from: cgmEndTime)
 
         if cgmEndTime < Date.now {
             cgmState = .expired

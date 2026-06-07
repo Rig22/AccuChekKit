@@ -649,6 +649,18 @@
         }
       }
     },
+    "Calibrate again at %@ to keep your sensor in therapy mode." : {
+
+    },
+    "Calibrate again to keep your sensor in therapy mode." : {
+
+    },
+    "Calibrate now to keep your sensor in therapy mode." : {
+
+    },
+    "Calibrate now to start using your sensor." : {
+
+    },
     "Calibrate Sensor" : {
       "comment" : "Action calibrate",
       "extractionState" : "manual",
@@ -3399,6 +3411,9 @@
         }
       }
     },
+    "Establishing a connection to your sensor." : {
+
+    },
     "Found an Accu Chek CGM!" : {
       "comment" : "found device title",
       "extractionState" : "manual",
@@ -5660,6 +5675,9 @@
           }
         }
       }
+    },
+    "Manage" : {
+
     },
     "min" : {
       "comment" : "age in min",
@@ -9211,6 +9229,9 @@
         }
       }
     },
+    "Sensor Battery Low" : {
+
+    },
     "Sensor calibration" : {
       "comment" : "title sensor calibration",
       "extractionState" : "manual",
@@ -9372,6 +9393,9 @@
           }
         }
       }
+    },
+    "Sensor Expired" : {
+
     },
     "Sensor expired!" : {
       "comment" : "expired",
@@ -10021,6 +10045,15 @@
         }
       }
     },
+    "Sensor Malfunction" : {
+
+    },
+    "Sensor OK" : {
+
+    },
+    "Sensor Readings Unavailable" : {
+
+    },
     "Sensor State" : {
       "comment" : "CGM name",
       "extractionState" : "manual",
@@ -10182,6 +10215,9 @@
           }
         }
       }
+    },
+    "Sensor Temperature" : {
+
     },
     "Sensor temperature too high" : {
       "comment" : "title sensor temp high",
@@ -12119,6 +12155,9 @@
         }
       }
     },
+    "Therapy Mode" : {
+
+    },
     "This Accu chek Sensor is using advanced encryption which is not supported yet... %@" : {
       "comment" : "unsupported device message",
       "extractionState" : "manual",
@@ -12441,6 +12480,9 @@
         }
       }
     },
+    "This could be due to compression or connection loss. Wait for it to resolve, or replace the sensor if it persists." : {
+
+    },
     "Time" : {
       "comment" : "current glucose date",
       "extractionState" : "manual",
@@ -12762,6 +12804,9 @@
           }
         }
       }
+    },
+    "Trend Mode" : {
+
     },
     "Turn the twist cap to open the sterile barrier. You will feel a slight resistance and hear a cracking sound. Pull the twist cap from the applicator." : {
       "localizations" : {
@@ -13893,6 +13938,12 @@
         }
       }
     },
+    "Your sensor battery is running low. Start a new one as soon as possible." : {
+
+    },
+    "Your sensor has expired. Start a new one as soon as possible." : {
+
+    },
     "Your sensor is calibrating. To complete the calibration phase, make sure to calibate between %@ and %@" : {
       "localizations" : {
         "ar" : {
@@ -14052,6 +14103,21 @@
           }
         }
       }
+    },
+    "Your sensor is functioning normally." : {
+
+    },
+    "Your sensor is malfunctioning. Start a new one as soon as possible." : {
+
+    },
+    "Your sensor is outside its operating temperature range. Move somewhere it can return to normal." : {
+
+    },
+    "Your sensor is warming up." : {
+
+    },
+    "Your sensor is warming up. First calibration at %@." : {
+
     },
     "Your sensor is warming up. The first calibration is possible from: %@" : {
       "localizations" : {
