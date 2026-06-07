@@ -3,71 +3,6 @@ import HealthKit
 import LoopKit
 import SwiftUI
 
-enum CGMState {
-    case warmingup
-    case active
-    case expired
-}
-
-enum SensorStatusSeverity {
-    case neutral
-    case good
-    case warning
-    case critical
-}
-
-// A single, ordered view of sensor status. Evaluated by precedence (faults
-// override lifecycle); the first matching case wins. Calibration availability is
-// driven by the sensor-reported nextCalibrationAt, not the inferred phase.
-enum SensorStatusDisplay: CaseIterable, Hashable {
-    case connecting
-    case expired
-    case malfunction
-    case readingsUnavailable
-    case batteryLow
-    case temperature
-    // Trend mode (pre-first-calibration). When calibration is due, the row gains a
-    // Start button, "calibrate now" copy, and escalates to warning.
-    case trendMode(calibrationDue: Bool)
-    // Therapy mode (after first calibration). When the second calibration is due,
-    // the row escalates from warning to critical and gains a Start button.
-    case therapyMode(calibrationDue: Bool)
-    case ok
-
-    static var allCases: [SensorStatusDisplay] {
-        [
-            .connecting, .expired, .malfunction, .readingsUnavailable, .batteryLow, .temperature,
-            .trendMode(calibrationDue: false), .trendMode(calibrationDue: true),
-            .therapyMode(calibrationDue: false), .therapyMode(calibrationDue: true),
-            .ok
-        ]
-    }
-
-    var severity: SensorStatusSeverity {
-        switch self {
-        case .connecting,
-             .trendMode(calibrationDue: false): return .neutral
-        case .ok: return .good
-        case .temperature,
-             .therapyMode(calibrationDue: false),
-             .trendMode(calibrationDue: true): return .warning
-        case .batteryLow,
-             .expired,
-             .malfunction,
-             .readingsUnavailable,
-             .therapyMode(calibrationDue: true): return .critical
-        }
-    }
-
-    var showsCalibrationButton: Bool {
-        switch self {
-        case .therapyMode(calibrationDue: true),
-             .trendMode(calibrationDue: true): return true
-        default: return false
-        }
-    }
-}
-
 class SettingsViewModel: ObservableObject {
     @Published var cgmState = CGMState.warmingup
     @Published var connected: Bool = false
@@ -85,22 +20,16 @@ class SettingsViewModel: ObservableObject {
     @Published var sensorWarmupMinutes: Double = 0
     @Published var notifications: [NotificationContent] = []
     @Published var readingsUnavailable: Bool = false
-
-    // Demo only (simulator): when set, the status row renders this overridden
-    // value so each variant can be previewed without a device.
-    @Published var demoStatus: SensorStatusDisplay? = nil
-
     @Published var calibrationAvailable: Bool = false
     @Published var calibrationPhase: CalibrationPhase = .done
-    // Set by a live CGM_STATUS read on settings open; gates the calibration prompt
-    // so we only offer Start when the sensor actually signals calibration is
-    // allowed, not on the time estimate alone.
     @Published var calibrationConfirmed: Bool = false
-
     @Published var isSharePresented = false
     @Published var showingDeleteConfirmation = false
     @Published var showingRepairConfirmation = false
 
+    // Simulator-only
+    @Published var demoStatus: SensorStatusDisplay? = nil
+    
     private let timeFormatter = {
         let formatter = DateFormatter()
         formatter.timeStyle = .short
@@ -176,13 +105,6 @@ class SettingsViewModel: ObservableObject {
             return .temperature
         }
 
-        // Calibration progression. The sensor starts in trend mode (.warmingup);
-        // the first calibration moves it to therapy mode (.calibratedOnce). A second
-        // calibration within its window keeps it in therapy mode (.done); miss it and
-        // the sensor falls back to trend mode. Availability (now >= the sensor-
-        // reported time) gates whether we prompt to calibrate vs. announce the time.
-        // Only prompt to calibrate when the time has passed AND a live status read
-        // confirmed the sensor is actually signalling calibration is allowed.
         let calibrationDue = calibrationAvailable && calibrationConfirmed
 
         switch calibrationPhase {
@@ -195,10 +117,6 @@ class SettingsViewModel: ObservableObject {
         }
     }
 
-    // Called when the settings screen appears. If the calibration time has passed,
-    // do one live CGM_STATUS read to confirm the sensor actually allows calibration
-    // before we offer the Start button. Kept to settings-open (not every state
-    // tick) to avoid spamming BLE reads.
     func refreshCalibrationConfirmation() {
         guard calibrationAvailable, connected else {
             calibrationConfirmed = false
