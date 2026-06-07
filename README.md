@@ -16,7 +16,7 @@ Please make sure to attach your logs when you file a report.
 
 You can find them by going to the Accu-Chek settings menu and pressing the "Share Accu-Chek logs" button.
 
-### Frequently Asked Questions
+## Frequently Asked Questions
 
 **Q: I've already warmed up the sensor and want to pair it but Trio/Loop can't find it?**
 
