@@ -209,6 +209,7 @@ public class AccuChekCgmManager: CGMManager {
     internal func cleanup() {
         state.previousDeviceName = state.deviceName
         state.deviceName = nil
+        state.sensorInfo = nil
         notifyStateDidChange()
 
         bluetooth.stopScan()
