@@ -79,6 +79,18 @@ public class AccuChekCgmManager: CGMManager {
         )
     }
 
+    public var sensorName: String? {
+        guard let deviceName = state.deviceName else {
+            return nil
+        }
+
+        return String(deviceName.dropFirst(3))
+    }
+
+    public var sensorActivatedAt: Date? {
+        state.cgmStartTime
+    }
+
     public func fetchNewDataIfNeeded(_ completion: @escaping (LoopKit.CGMReadingResult) -> Void) {
         completion(.noData)
     }

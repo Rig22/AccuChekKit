@@ -19,6 +19,11 @@ extension PairingAdapter {
             return
         }
 
+        if cgmManager.state.sensorInfo == nil, let sensorInfo = getSensorInfo() {
+            cgmManager.state.sensorInfo = sensorInfo
+            cgmManager.notifyStateDidChange()
+        }
+
         getLastCalibration(startTime: startTime)
 
         guard startTime.addingTimeInterval(.hours(1)) < Date.now else {
@@ -50,6 +55,62 @@ extension PairingAdapter {
         cgmManager.notifyStateDidChange()
 
         return response.start
+    }
+
+    internal func getSensorInfo() -> SensorInfo? {
+        var manufacturer = ""
+        if let manufacturerData = peripheralManager.read(service: CBUUID.DIS_SERVICE, characteristic: CBUUID.DIS_MANUFACTURER) {
+            manufacturer = manufacturerData.toString()
+        } else {
+            logger.error("Failed to read manufacturer")
+        }
+
+        var model = ""
+        if let modelData = peripheralManager.read(service: CBUUID.DIS_SERVICE, characteristic: CBUUID.DIS_MODEL) {
+            model = modelData.toString()
+        } else {
+            logger.error("Failed to read model")
+        }
+
+        var serialNumber = ""
+        if let serialNumberData = peripheralManager.read(service: CBUUID.DIS_SERVICE, characteristic: CBUUID.DIS_SERIAL_NUMBER) {
+            serialNumber = serialNumberData.toString()
+        } else {
+            logger.error("Failed to read serialNumber")
+        }
+
+        var firmware = ""
+        if let firmwareData = peripheralManager.read(service: CBUUID.DIS_SERVICE, characteristic: CBUUID.DIS_FIRMWARE_REVISION) {
+            firmware = firmwareData.toString()
+        } else {
+            logger.error("Failed to read firmware")
+        }
+
+        var hardware = ""
+        if let hardwareData = peripheralManager.read(service: CBUUID.DIS_SERVICE, characteristic: CBUUID.DIS_HARDWARE_REVISION) {
+            hardware = hardwareData.toString()
+        } else {
+            logger.error("Failed to read hardware")
+        }
+
+        var software = ""
+        if let softwareData = peripheralManager.read(service: CBUUID.DIS_SERVICE, characteristic: CBUUID.DIS_SOFTWARE_REVISION) {
+            software = softwareData.toString()
+        } else {
+            logger.error("Failed to read software")
+        }
+
+        let sensorInfo = SensorInfo(
+            manufacturer: manufacturer,
+            model: model,
+            serialNumber: serialNumber,
+            firmwareRevision: firmware,
+            hardwareRevision: hardware,
+            softwareRevision: software
+        )
+
+        logger.info(sensorInfo.describe)
+        return sensorInfo
     }
 
     private func getLastCalibration(startTime: Date) {

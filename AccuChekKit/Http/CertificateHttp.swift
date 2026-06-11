@@ -59,7 +59,6 @@ enum CertificateHttp {
                 return nil
             }
 
-            print(String(data: data, encoding: .utf8))
             let responseObj = try JSONDecoder().decode(AcsCertrificateResponse.self, from: data)
 
             let certificates = responseObj.certificates.compactMap {

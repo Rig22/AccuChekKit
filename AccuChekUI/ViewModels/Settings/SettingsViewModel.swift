@@ -12,6 +12,10 @@ class SettingsViewModel: ObservableObject {
     @Published var nextCalibrationDate: String? = nil
     @Published var sensorStartedAt: String = ""
     @Published var sensorEndsAt: String = ""
+    @Published var sensorModel: String = ""
+    @Published var firmwareRevision: String = ""
+    @Published var hardwareRevision: String = ""
+    @Published var softwareRevision: String = ""
     @Published var sensorAgeProcess: Double = 0
     @Published var sensorAgeDays: Double = 0
     @Published var sensorAgeHours: Double = 0
@@ -127,10 +131,12 @@ extension SettingsViewModel: StateObserver {
         calibrationConfirmed = state.cgmStatus.contains(.calibrationRecommended)
             || state.cgmStatus.contains(.calibrationRequired)
 
-        let deviceName = state.deviceName ?? ""
-        if deviceName.hasPrefix("AC-") {
-            // Replace "AC-" with "(21) " prefix as per on the applicator pacakaging
-            deviceSerialNumber = "(21) " + deviceName.dropFirst(3)
+        if let sensorInfo = state.sensorInfo {
+            sensorModel = sensorInfo.model
+            deviceSerialNumber = "(21) " + sensorInfo.serialNumber
+            firmwareRevision = sensorInfo.firmwareRevision
+            hardwareRevision = sensorInfo.hardwareRevision
+            softwareRevision = sensorInfo.softwareRevision
         }
 
         if let glucose = state.lastGlucoseValue {

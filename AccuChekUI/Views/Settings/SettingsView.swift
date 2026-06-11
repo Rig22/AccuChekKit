@@ -99,6 +99,33 @@ struct SettingsView: View {
                     title: Text("Ends at", comment: "cgm ends"),
                     value: viewModel.sensorEndsAt
                 )
+                if !viewModel.sensorModel.isEmpty {
+                    SectionItem(
+                        title: Text("Model", comment: "firmware"),
+                        value: viewModel.sensorModel
+                    )
+                }
+                if !viewModel.firmwareRevision.isEmpty {
+                    SectionItem(
+                        title: Text("Firmware Revision", comment: "firmware"),
+                        value: viewModel.firmwareRevision,
+                        font: .footnote
+                    )
+                }
+                if !viewModel.hardwareRevision.isEmpty {
+                    SectionItem(
+                        title: Text("Hardware Revision", comment: "hardware"),
+                        value: viewModel.hardwareRevision,
+                        font: .footnote
+                    )
+                }
+                if !viewModel.softwareRevision.isEmpty {
+                    SectionItem(
+                        title: Text("Software Revision", comment: "software"),
+                        value: viewModel.softwareRevision,
+                        font: .footnote
+                    )
+                }
             } header: {
                 Text("Sensor information", comment: "current sensor")
             }
@@ -152,8 +179,8 @@ struct SettingsView: View {
                 status.message(calibrationTime: viewModel.nextCalibrationDate)
                     .foregroundStyle(.secondary)
             }
-            Spacer()
             if status.showsCalibrationButton {
+                Spacer()
                 Button(action: viewModel.doCalibration) {
                     Text("Start", comment: "calibration start button")
                 }
@@ -162,13 +189,15 @@ struct SettingsView: View {
         }
     }
 
-    @ViewBuilder private func SectionItem(title: Text, value: String) -> some View {
-        HStack(alignment: .bottom) {
+    @ViewBuilder private func SectionItem(title: Text, value: String, font: Font = .body) -> some View {
+        HStack(alignment: .center) {
             title
                 .foregroundColor(.primary)
             Spacer()
             Text(value)
+                .font(font)
                 .foregroundColor(.secondary)
+                .multilineTextAlignment(.trailing)
         }
     }
 

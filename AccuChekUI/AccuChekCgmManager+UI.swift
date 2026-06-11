@@ -3,12 +3,12 @@ import LoopKitUI
 
 extension AccuChekCgmManager: CGMManagerUI {
     public static func setupViewController(
-        bluetoothProvider _: any LoopKit.BluetoothProvider,
-        displayGlucosePreference: LoopKitUI.DisplayGlucosePreference,
-        colorPalette: LoopKitUI.LoopUIColorPalette,
+        bluetoothProvider _: BluetoothProvider,
+        displayGlucosePreference: DisplayGlucosePreference,
+        colorPalette: LoopUIColorPalette,
         allowDebugFeatures: Bool,
-        prefersToSkipUserInteraction _: Bool
-    ) -> LoopKitUI.SetupUIResult<any LoopKitUI.CGMManagerViewController, any LoopKitUI.CGMManagerUI> {
+        prefersToSkipUserInteraction _: Bool = false
+    ) -> SetupUIResult<CGMManagerViewController, CGMManagerUI> {
         let vc = AccuChekUIController(
             colorPalette: colorPalette,
             displayGlucosePreference: displayGlucosePreference,
@@ -18,11 +18,11 @@ extension AccuChekCgmManager: CGMManagerUI {
     }
 
     public func settingsViewController(
-        bluetoothProvider _: any LoopKit.BluetoothProvider,
-        displayGlucosePreference: LoopKitUI.DisplayGlucosePreference,
-        colorPalette: LoopKitUI.LoopUIColorPalette,
+        bluetoothProvider _: BluetoothProvider,
+        displayGlucosePreference: DisplayGlucosePreference,
+        colorPalette: LoopUIColorPalette,
         allowDebugFeatures: Bool
-    ) -> any LoopKitUI.CGMManagerViewController {
+    ) -> CGMManagerViewController {
         AccuChekUIController(
             cgmManager: self,
             colorPalette: colorPalette,

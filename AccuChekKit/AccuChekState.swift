@@ -59,6 +59,7 @@ struct AccuChekState: RawRepresentable, Equatable {
 
     public var isConnected: Bool
     public var mtu: UInt16 = 0
+    public var sensorInfo: SensorInfo?
     public var deviceName: String?
     public var previousDeviceName: String?
     public var serialNumber: String?
@@ -138,6 +139,10 @@ struct AccuChekState: RawRepresentable, Equatable {
             calibrationPhase = .done
         }
 
+        if let sensorInfoRaw = rawValue["sensorInfo"] as? SensorInfo.RawValue {
+            sensorInfo = SensorInfo(rawValue: sensorInfoRaw)
+        }
+
         do {
             if let certificateRaw = rawValue["certificate"] as? Data {
                 certificate = try JSONDecoder().decode(Certificate.self, from: certificateRaw)
@@ -174,6 +179,7 @@ struct AccuChekState: RawRepresentable, Equatable {
         raw["refreshToken"] = refreshToken
         raw["expiresAt"] = expiresAt
         raw["previousDeviceName"] = previousDeviceName
+        raw["sensorInfo"] = sensorInfo?.rawValue
 
         do {
             raw["certificate"] = try JSONEncoder().encode(certificate)

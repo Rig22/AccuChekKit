@@ -1,7 +1,6 @@
 import LoopKit
 import LoopKitUI
 import SwiftUI
-import UIKit
 
 enum AccuChekScreen {
     case onboarding

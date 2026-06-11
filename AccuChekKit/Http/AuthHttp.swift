@@ -50,7 +50,6 @@ enum AuthHttp {
                 return nil
             }
 
-            print(String(data: data, encoding: .utf8))
             return try JSONDecoder().decode(AuthResponse.self, from: data)
         } catch {
             logger.error("Failed to get auth token: \(error.localizedDescription)")
