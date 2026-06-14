@@ -11,7 +11,6 @@ class CgmMeasurement {
     let isValid: Bool
     let condition: GlucoseCondition?
 
-
     // The sensor's measurable range is between
     // 40-400mg/dL (2.22-22.2mmol/L) as per the device spec
     private enum MeasurableRangeMgDl {

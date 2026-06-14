@@ -30,10 +30,10 @@ class GetCalibrationPacketTests {
         packet.parseResponse(data: Data(hexString: "06e4f2710411ffff02000000fe"))
 
         #expect(packet.receivedResponse == true)
-      
+
         // Second calibration
         #expect(packet.recordNumber == 2)
-        
+
         // Sentinel value indicating "not scheduled" (sensor fully calibrated)
         #expect(packet.nextCalibrationOffset == 0xFFFF)
     }

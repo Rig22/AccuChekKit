@@ -15,7 +15,7 @@ class CalibratePacketTests {
         let request = packet.getRequest()
 
         #expect(request[0] == 0x04) // Calibration opcode
-        
+
         // 200 mg/dL = 0x00C8 = 0xC800 (LE)
         #expect(request[1] == 0xC8)
         #expect(request[2] == 0x00)
