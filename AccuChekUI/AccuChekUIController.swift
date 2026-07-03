@@ -63,11 +63,20 @@ class AccuChekUIController: UINavigationController, CGMManagerOnboarding, Comple
     private func getInitialScreen() -> AccuChekScreen {
         cgmManager.isOnboarded ? .settings : .onboarding
     }
-
-    private func hostingController<Content: View>(rootView: Content) -> DismissibleHostingController<some View> {
+    
+    private func hostingController<Content: View>(
+        rootView: Content,
+        title: String? = nil,
+        largeTitleDisplayMode: UINavigationItem.LargeTitleDisplayMode = .automatic
+    ) -> DismissibleHostingController<some View> {
         let rootView = rootView
             .environmentObject(displayGlucosePreference)
-        return DismissibleHostingController(content: rootView, colorPalette: colorPalette)
+
+        let hostedView = DismissibleHostingController(content: rootView, colorPalette: colorPalette)
+        hostedView.navigationItem.title = title
+        hostedView.navigationItem.largeTitleDisplayMode = largeTitleDisplayMode
+
+        return hostedView
     }
 
     private func viewControllerForScreen(_ screen: AccuChekScreen) -> UIViewController {
@@ -77,10 +86,16 @@ class AccuChekUIController: UINavigationController, CGMManagerOnboarding, Comple
                 manualScan: onboardingDone,
                 sensorPlacement: { self.navigateTo(.placementGuide) }
             )
-            return hostingController(rootView: view)
+            return hostingController(
+                rootView: view,
+                title: String(localized: "Welcome!", comment: "welcome")
+            )
 
         case .placementGuide:
-            return hostingController(rootView: SensorPlacementView())
+            return hostingController(
+                rootView: SensorPlacementView(),
+                title: String(localized: "Placement Guide", comment: "label placement guide")
+            )
 
         case .scanning:
             let viewModel = ScanViewModel(
@@ -94,7 +109,10 @@ class AccuChekUIController: UINavigationController, CGMManagerOnboarding, Comple
                     self.resetNavigationTo([.pairing])
                 }
             )
-            return hostingController(rootView: ScanView(viewModel: viewModel))
+            return hostingController(
+                rootView: ScanView(viewModel: viewModel),
+                title: String(localized: "Scanning for CGM", comment: "scan title")
+            )
 
         case .pairing:
             let nextStep = {
@@ -109,7 +127,10 @@ class AccuChekUIController: UINavigationController, CGMManagerOnboarding, Comple
                 scanResult: scanResult,
                 nextStep: nextStep
             )
-            return hostingController(rootView: PairingView(viewModel: viewModel))
+            return hostingController(
+                rootView: PairingView(viewModel: viewModel),
+                title: String(localized: "Pairing with CGM", comment: "pairing title")
+            )
 
         case .settings:
             let deleteCGM = {
@@ -126,11 +147,17 @@ class AccuChekUIController: UINavigationController, CGMManagerOnboarding, Comple
                 doPairing: { self.navigateTo(.scanning) },
                 deleteCGM: deleteCGM
             )
-            return hostingController(rootView: SettingsView(viewModel: viewModel))
+            return hostingController(
+                rootView: SettingsView(viewModel: viewModel),
+                title: String("Accu-Chek CGM")
+            )
 
         case .calibration:
             let viewModel = CalibrationViewModel(cgmManager: cgmManager, displayGlucosePreference.unit, goBack)
-            return hostingController(rootView: CalibrationView(viewModel: viewModel))
+            return hostingController(
+                rootView: CalibrationView(viewModel: viewModel),
+                title: String(localized: "Calibration", comment: "Calibation header")
+            )
         }
     }
 

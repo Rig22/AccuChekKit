@@ -129,6 +129,5 @@ struct SensorPlacementView: View {
                 Text("Important", comment: "label important")
             }
         }
-        .navigationTitle(String(localized: "Placement Guide", comment: "label placement guide"))
     }
 }

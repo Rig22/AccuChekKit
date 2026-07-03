@@ -55,7 +55,6 @@ struct CalibrationView: View {
             .padding([.bottom, .horizontal])
             .disabled(viewModel.isLoading)
         }
-        .navigationTitle(String(localized: "Calibration", comment: "Calibation header"))
     }
 
     private func formatGlucose(_ value: UInt16) -> String {

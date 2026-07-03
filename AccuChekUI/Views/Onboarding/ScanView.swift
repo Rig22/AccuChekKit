@@ -39,7 +39,6 @@ struct ScanView: View {
                     .font(.footnote)
             }
         }
-        .navigationTitle(String(localized: "Scanning for CGM", comment: "scan title"))
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: { viewModel.isShowingPlacement = true }) {

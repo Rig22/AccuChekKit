@@ -44,7 +44,6 @@ struct OnboardingView: View {
             }
             .padding(.horizontal)
         }
-        .navigationTitle(String(localized: "Welcome!", comment: "welcome"))
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: self.dismiss) {

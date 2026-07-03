@@ -39,6 +39,5 @@ struct PairingView: View {
                     .font(.footnote)
             }
         }
-        .navigationTitle(String(localized: "Pairing with CGM", comment: "pairing title"))
     }
 }

@@ -164,7 +164,6 @@ struct SettingsView: View {
         .navigationBarItems(trailing: Button(action: dismiss) {
             Text("Done", comment: "done button title")
         })
-        .navigationTitle("Accu-Chek CGM")
     }
 
     @ViewBuilder private var sensorStatusRow: some View {
