@@ -61,7 +61,7 @@ enum SensorStatusEnum: UInt8 {
         guard let identifier = alertIdentifier, let content = alertContent else {
             return nil
         }
-        
+
         return Alert(
             identifier: identifier,
             foregroundContent: content,
@@ -69,7 +69,7 @@ enum SensorStatusEnum: UInt8 {
             trigger: .immediate
         )
     }
-    
+
     private var alertContent: Alert.Content? {
         switch self {
         case .sessionStopped:
@@ -120,7 +120,7 @@ enum SensorStatusEnum: UInt8 {
         default: return nil
         }
     }
-    
+
     private var alertIdentifier: Alert.Identifier? {
         switch self {
         case .sessionStopped:

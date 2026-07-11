@@ -40,13 +40,19 @@ extension AccuChekCgmManager: CGMManagerUI {
     }
 
     public var cgmStatusHighlight: (any LoopKit.DeviceStatusHighlight)? {
-        let cgmNotifications = state.cgmStatus.compactMap(\.notification)
+        var status = state.cgmStatus
+        if status.contains(.calibrationNotAllowed) {
+            status = status.filter { $0 != .calibrationRequired && $0 != .calibrationRecommended }
+        }
+
+        let cgmNotifications = status.compactMap(\.notification)
         if let notification = cgmNotifications.first {
+            let calibrationTitle = String(localized: "Sensor calibration", comment: "title sensor fault")
+
             return AccuChekDeviceStatusHighlight(
-                localizedMessage: notification.content,
+                localizedMessage: notification.backgroundContent.title,
                 imageName: "exclamationmark.triangle",
-                state: notification.type == .calibrationRequired || notification
-                    .type == .calibrationRecommended ? .warning : .critical
+                state: notification.backgroundContent.title == calibrationTitle ? .warning : .critical
             )
         }
 

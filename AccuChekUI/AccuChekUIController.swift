@@ -1,4 +1,3 @@
-import LoopKit
 import LoopKitUI
 import SwiftUI
 
@@ -101,8 +100,10 @@ class AccuChekUIController: UINavigationController, CGMManagerOnboarding, Comple
             let viewModel = ScanViewModel(
                 cgmManager: cgmManager,
                 nextStep: { result in
-                    DispatchQueue.main.async {
-                        self.cgmManagerOnboardingDelegate?.cgmManagerOnboarding(didOnboardCGMManager: self.cgmManager)
+                    if let cgmManagerOnboardingDelegate = self.cgmManagerOnboardingDelegate {
+                        DispatchQueue.main.async {
+                            cgmManagerOnboardingDelegate.cgmManagerOnboarding(didOnboardCGMManager: self.cgmManager)
+                        }
                     }
 
                     self.scanResult = result
@@ -134,7 +135,7 @@ class AccuChekUIController: UINavigationController, CGMManagerOnboarding, Comple
 
         case .settings:
             let deleteCGM = {
-                self.cgmManager.notifyDelegateOfDeletion {
+                self.cgmManager.delete {
                     DispatchQueue.main.async {
                         self.completionDelegate?.completionNotifyingDidComplete(self)
                     }
@@ -165,14 +166,14 @@ class AccuChekUIController: UINavigationController, CGMManagerOnboarding, Comple
         cgmManager.state.onboarded = true
         cgmManager.notifyStateDidChange()
 
-        if let cgmManagerOnboardingDelegate = self.cgmManagerOnboardingDelegate {
-            DispatchQueue.main.async {
+        DispatchQueue.main.async {
+            if let cgmManagerOnboardingDelegate = self.cgmManagerOnboardingDelegate {
                 cgmManagerOnboardingDelegate.cgmManagerOnboarding(didOnboardCGMManager: self.cgmManager)
                 cgmManagerOnboardingDelegate.cgmManagerOnboarding(didCreateCGMManager: self.cgmManager)
                 self.completionDelegate?.completionNotifyingDidComplete(self)
+            } else {
+                self.logger.warning("Not onboarded -> no onboardDelegate...")
             }
-        } else {
-            logger.warning("Not onboarded -> no onboardDelegate...")
         }
     }
 
@@ -215,8 +216,8 @@ class AccuChekUIController: UINavigationController, CGMManagerOnboarding, Comple
             cgmManager.state.cgmStatus = []
             cgmManager.notifyStateDidChange()
 
-            if let cgmManagerOnboardingDelegate = self.cgmManagerOnboardingDelegate {
-                DispatchQueue.main.async {
+            DispatchQueue.main.async {
+                if let cgmManagerOnboardingDelegate = self.cgmManagerOnboardingDelegate {
                     cgmManagerOnboardingDelegate.cgmManagerOnboarding(didOnboardCGMManager: self.cgmManager)
                     cgmManagerOnboardingDelegate.cgmManagerOnboarding(didCreateCGMManager: self.cgmManager)
                     self.completionDelegate?.completionNotifyingDidComplete(self)

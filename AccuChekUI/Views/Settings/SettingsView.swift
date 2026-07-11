@@ -131,6 +131,13 @@ struct SettingsView: View {
             }
 
             Section {
+                Button(action: { viewModel.showingRepairConfirmation = true }) {
+                    Text("Pair new Sensor", comment: "pair new sensor")
+                }
+                .actionSheet(isPresented: $viewModel.showingRepairConfirmation) {
+                    pairNewCGMActionSheet
+                }
+
                 Button(action: { viewModel.isSharePresented = true }) {
                     Text("Share Accu-chek logs", comment: "share logs")
                 }
@@ -138,17 +145,6 @@ struct SettingsView: View {
                     ActivityViewController(activityItems: viewModel.getLogs())
                 })
 
-                Button(action: { viewModel.showingRepairConfirmation = true }) {
-                    Text("Pair new Sensor", comment: "pair new sensor")
-                }
-                .actionSheet(isPresented: $viewModel.showingRepairConfirmation) {
-                    pairNewCGMActionSheet
-                }
-            } header: {
-                Text("Manage", comment: "manage sensor section")
-            }
-
-            Section {
                 Button(action: {
                     viewModel.showingDeleteConfirmation = true
                 }) {
@@ -158,6 +154,8 @@ struct SettingsView: View {
                 .actionSheet(isPresented: $viewModel.showingDeleteConfirmation) {
                     removeCgmManagerActionSheet
                 }
+            } header: {
+                Text("Manage", comment: "manage sensor section")
             }
         }
         .listStyle(InsetGroupedListStyle())

@@ -198,10 +198,7 @@ public class AccuChekCgmManager: CGMManager {
             statusList = statusList.filter { $0 != .calibrationRecommended && $0 != .calibrationRequired }
         }
 
-        let notifications = statusList.compactMap(\.notification)
-        if !notifications.isEmpty {
-            NotificationHelper.sendCgmAlert(alerts: notifications)
-        }
+        sendAlert(alerts: statusList)
     }
 
     internal func readSensorStatus() -> SensorStatus? {
@@ -229,16 +226,16 @@ public class AccuChekCgmManager: CGMManager {
 
         notifyDelegateOfDeletion(completion: completion)
     }
-    
+
     private func sendAlert(alerts: [SensorStatusEnum]) {
         let alertList = alerts.compactMap(\.notification)
-        
+
         delegate.notify {
             guard let cgmManagerDelegate = $0 else {
                 self.logger.warning("Skip notifying delegate as no delegate set...")
                 return
             }
-            
+
             alertList.forEach {
                 cgmManagerDelegate.issueAlert($0)
             }

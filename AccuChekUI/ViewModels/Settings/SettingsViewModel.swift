@@ -22,7 +22,7 @@ class SettingsViewModel: ObservableObject {
     @Published var sensorAgeMinutes: Double = 0
     @Published var sensorWarmupProgress: Double = 0
     @Published var sensorWarmupMinutes: Double = 0
-    @Published var notifications: [NotificationContent] = []
+    @Published var notifications: [LoopKit.Alert] = []
     @Published var readingsUnavailable: Bool = false
     @Published var calibrationAvailable: Bool = false
     @Published var calibrationPhase: CalibrationPhase = .done
@@ -33,6 +33,8 @@ class SettingsViewModel: ObservableObject {
 
     // Simulator-only
     @Published var demoStatus: SensorStatusDisplay? = nil
+
+    private var cgmStatus: [SensorStatusEnum] = []
 
     private let timeFormatter = {
         let formatter = DateFormatter()
@@ -77,7 +79,7 @@ class SettingsViewModel: ObservableObject {
         }
 
         func hasNotification(_ type: SensorStatusEnum) -> Bool {
-            notifications.contains { $0.type == type }
+            cgmStatus.contains { $0 == type }
         }
 
         if !connected {
@@ -130,9 +132,10 @@ extension SettingsViewModel: StateObserver {
         readingsUnavailable = state.readingsUnavailable
         notifications = state.cgmStatus.compactMap(\.notification)
         calibrationPhase = state.calibrationPhase
-        calibrationConfirmed = state.cgmStatus.contains(.calibrationRecommended)
-            || state.cgmStatus.contains(.calibrationRequired)
-        calibrationAvailable = !state.cgmStatus.contains(.calibrationNotAllowed)
+        cgmStatus = state.cgmStatus
+        calibrationConfirmed = cgmStatus.contains(.calibrationRecommended)
+            || cgmStatus.contains(.calibrationRequired)
+        calibrationAvailable = !cgmStatus.contains(.calibrationNotAllowed)
 
         if let sensorInfo = state.sensorInfo {
             sensorModel = sensorInfo.model
